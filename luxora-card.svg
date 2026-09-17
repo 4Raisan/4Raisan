@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-label="Luxora. Featured project. Full-stack home concierge MVP. Delivery, access and architecture.">
+<defs><linearGradient id="g"><stop stop-color="#102330"/><stop offset="1" stop-color="#141729"/></linearGradient></defs>
+<rect x="1" y="1" width="1198" height="228" rx="16" fill="url(#g)" stroke="#354158"/>
+<path d="M1 45V185" stroke="#77e5ed" stroke-width="3"/>
+<g font-family="Segoe UI,Arial,sans-serif"><text x="36" y="39" fill="#7ee0e8" font-family="Consolas,monospace" font-size="12" letter-spacing="2">01 / FEATURED PROJECT</text>
+<text x="34" y="99" fill="#f3f6ff" font-size="52" font-weight="700" letter-spacing="-2">Luxora<tspan fill="#70d9e5">.</tspan></text>
+<text x="37" y="133" fill="#b6c5d7" font-size="18">A home concierge platform, from interface to infrastructure.</text>
+<text x="37" y="191" fill="#8a9fb9" font-family="Consolas,monospace" font-size="13">REACT / EXPRESS / POSTGRESQL / DOCKER / GITHUB ACTIONS</text>
+<path d="M740 34V195" stroke="#364258"/>
+<text x="774" y="60" fill="#a799ed" font-family="Consolas,monospace" font-size="12">ENGINEERING LENS</text>
+<text x="774" y="100" fill="#e2eaf5" font-size="19">Delivery workflows</text><text x="774" y="137" fill="#e2eaf5" font-size="19">Role-based access</text><text x="774" y="174" fill="#e2eaf5" font-size="19">Architecture documentation</text>
+<text x="1135" y="53" fill="#8de5eb" font-size="29">↗</text></g></svg>
