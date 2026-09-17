@@ -1,42 +1,61 @@
-<p><img src="./profile-banner.svg" width="100%" alt="Rashen Anupama — Cloud. Code. Control. IT undergraduate focused on cloud, DevOps, IAM security, DevSecOps and platform engineering." /></p>
+# Rashen Anupama
 
-<p align="center"><a href="https://github.com/4Raisan/Luxora_v1"><b>Explore my work ↗</b></a> &nbsp; · &nbsp; <a href="mailto:mn4raisan@gmail.com">Get in touch</a> &nbsp; · &nbsp; <a href="https://github.com/4Raisan?tab=repositories">All repositories</a></p>
+**IT undergraduate at SLTC Research University · Cloud & platform engineering focus**
 
-<h2>Cloud-focused undergraduate. Aspiring platform engineer.</h2>
-<p>I'm <b>Rashen Anupama</b>, an IT undergraduate at <b>SLTC Research University</b>, building toward a career in <b>cloud infrastructure, automation, and secure developer platforms</b>.</p>
-<p>I'm interested in the engineering behind a running service: reproducible environments, reliable delivery, and well-defined access. My direction brings together <b>Cloud &amp; DevOps, platform engineering, IAM security, and DevSecOps</b>.</p>
+Developing toward cloud infrastructure, deployment automation, and secure developer platforms.
 
-<h2>Selected work</h2>
-<a href="https://github.com/4Raisan/Luxora_v1"><img src="./luxora-card.svg" width="100%" alt="Luxora — full-stack home concierge MVP. Explore delivery workflows, role-based access and architecture documentation." /></a>
-<p>Luxora connects customers, service providers, and administrators through booking and service-delivery workflows. The repository includes:</p>
-<table>
-<tr><th align="left">Delivery</th><th align="left">Access</th><th align="left">Architecture</th></tr>
-<tr><td>GitHub Actions, Docker configuration, and documented test and build checks.</td><td>Backend authentication, role checks, and KYC checks across user workflows.</td><td>API documentation, a codebase knowledge graph, and an architecture explorer.</td></tr>
-</table>
-<p><a href="https://github.com/4Raisan/Luxora_v1">Source code ↗</a> &nbsp; · &nbsp; <a href="https://github.com/4Raisan/Luxora_v1/blob/main/docs/CI.md">Delivery workflow ↗</a> &nbsp; · &nbsp; <a href="https://github.com/4Raisan/Luxora_v1/blob/main/docs/architecture/TECHNICAL_ARCHITECTURE_AND_SYSTEM_DOCUMENTATION.md">Architecture ↗</a></p>
-<p><sub>MVP stage. External production integrations still need live-environment validation; see the <a href="https://github.com/4Raisan/Luxora_v1/blob/main/docs/planning/roadmap.md">project roadmap</a>.</sub></p>
+[Selected work](#selected-work) · [Engineering foundation](#engineering-foundation) · [Learning direction](#learning-direction) · [Contact](mailto:mn4raisan@gmail.com)
 
-<h2>Engineering foundation</h2>
-<p><b>Automation foundations:</b> Python · Bash · SQL.</p>
-<p><b>Delivery in Luxora:</b> Docker configuration · GitHub Actions · documented test and build checks.</p>
-<p><b>Deployment architecture:</b> Vercel frontend · Northflank API · Neon PostgreSQL.</p>
-<p><b>Application context:</b> React, Express, and Prisma connect the product to its runtime and data layer.</p>
+<img src="https://raw.githubusercontent.com/4Raisan/4Raisan/main/profile-banner.svg" alt="Cloud. Code. Control. — Rashen Anupama" width="100%" />
 
-<h2>My platform engineering roadmap</h2>
-<p><b>Cloud foundations → Infrastructure as Code → Containers → CI/CD → Kubernetes → Developer platforms</b></p>
-<p>Security runs through the whole path: identity, least privilege, secrets handling, and delivery checks.</p>
-<p>The priorities below describe where I'm developing next, rather than a list of completed qualifications.</p>
-<table>
-<tr><th align="left">Cloud &amp; platforms</th><th align="left">Identity &amp; secure delivery</th></tr>
-<tr><td>AWS, Linux &amp; networking foundations<br />Terraform &amp; reproducible infrastructure<br />Docker, CI/CD &amp; Kubernetes<br />Developer workflows &amp; observability</td><td>IAM &amp; identity lifecycles<br />Least-privilege access<br />Secrets management<br />Cloud security &amp; security checks in CI/CD</td></tr>
-</table>
+## Selected work
 
-<details>
-<summary><b>More from my learning notebook</b></summary>
-<br />
-<ul><li><a href="https://github.com/4Raisan/study-JAVA">Java &amp; OOP fundamentals</a></li><li><a href="https://github.com/4Raisan/py-Libraries">Exploring Python libraries</a></li><li><a href="https://github.com/4Raisan/Tkinter-GUI-making-">Python GUI experiments</a></li></ul>
-</details>
+### [Luxora](https://github.com/4Raisan/Luxora_v1) — application delivery and architecture
 
-<hr />
-<p align="center"><b>Interested in cloud, security, or developer platforms?</b><br /><a href="mailto:mn4raisan@gmail.com">Let's connect ↗</a></p>
+A home-concierge MVP connecting customers, service providers, and administrators. The repository brings together a React frontend, Express API, PostgreSQL database, and deployment configuration.
 
+- **Containers:** a multi-stage Docker build packages the frontend and backend runtime.
+- **Delivery:** GitHub Actions defines secret scanning, dependency checks, frontend builds, backend tests, and Docker smoke checks.
+- **Access control:** backend middleware validates sessions and checks application roles.
+- **Architecture:** API documentation and a codebase knowledge graph explain the system and its dependencies.
+
+[Container build](https://github.com/4Raisan/Luxora_v1/blob/main/Dockerfile) · [CI workflow and current results](https://github.com/4Raisan/Luxora_v1/actions/workflows/ci.yml) · [Access-control code](https://github.com/4Raisan/Luxora_v1/blob/main/backend/src/middleware/auth.js) · [Architecture documentation](https://github.com/4Raisan/Luxora_v1/blob/main/docs/architecture/TECHNICAL_ARCHITECTURE_AND_SYSTEM_DOCUMENTATION.md)
+
+*MVP stage; external production integrations still require validation. See the [roadmap](https://github.com/4Raisan/Luxora_v1/blob/main/docs/planning/roadmap.md) for limitations.*
+
+### [Cosplay Proxy](https://github.com/4Raisan/cosplay-proxy) — local developer tooling
+
+A Windows-based AI provider proxy with a FastAPI service, administration UI, and command-line launcher. Its source includes provider routing, configuration management, diagnostics, and PowerShell setup automation.
+
+**Relevant to my direction:** making local development tools easier to configure, launch, and troubleshoot.
+
+### [Smart City Algorithms](https://github.com/4Raisan/Smart-City-Algorithms) — computing foundations
+
+A Java group assignment covering route planning, sorting, and performance analysis. My documented responsibility was **sorting algorithms and performance comparison**.
+
+## Engineering foundation
+
+| Area | Evidence in my repositories |
+| --- | --- |
+| Automation and tooling | Python and PowerShell in Cosplay Proxy |
+| Containers and CI | Docker and GitHub Actions in Luxora |
+| APIs and data | FastAPI; Express, PostgreSQL, and Prisma |
+| Application access control | Session validation and role checks in Luxora |
+| Algorithms and teamwork | Java sorting implementations and documented group responsibilities |
+
+Luxora's documented deployment architecture uses **Vercel, Northflank, and Neon**.
+
+## Learning direction
+
+My path is **cloud foundations → infrastructure automation → platform engineering**, with security throughout.
+
+- **Foundations:** Linux, networking, and cloud infrastructure.
+- **Automation:** infrastructure as code, repeatable deployments, and CI/CD.
+- **Platforms:** container orchestration, observability, and developer workflows.
+- **Security:** IAM, least privilege, secrets management, and secure delivery.
+
+Longer term, I want to grow into cloud architecture through practical experience with operating systems, deployment trade-offs, and security boundaries.
+
+## Connect
+
+[Email](mailto:mn4raisan@gmail.com) · [All repositories](https://github.com/4Raisan?tab=repositories)
