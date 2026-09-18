@@ -39,8 +39,8 @@ These tools reflect work in the repositories above. Cloud infrastructure and IAM
 ### GitHub activity
 
 <p>
-  <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="240" align="middle">
-  <img src="assets/snake.svg" alt="Animated snake tracing 4Raisan’s GitHub contribution graph" width="420" align="middle">
+  <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="30%" align="middle">
+  <img src="assets/snake.svg" alt="Animated snake tracing 4Raisan’s GitHub contribution graph" width="69%" align="middle">
 </p>
 
 <sub>Public activity, refreshed daily. <!-- activity-date -->Updated 2026-09-18 UTC<!-- /activity-date -->. Activity counts describe participation, not skill level.</sub>
