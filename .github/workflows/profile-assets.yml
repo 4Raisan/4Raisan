@@ -18,15 +18,13 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      # The upstream stats action queries stargazers on other repositories,
+      # which GitHub denies to this repository's built-in token. Fetch only
+      # public contribution fields; keep the same scheduled, committed SVG model.
       - name: Generate public statistics
-        uses: readme-tools/github-readme-stats-action@94833c3d5a4b13dde2ba33224e3ea8624f474d11 # reviewed main, 2026-09-18
-        with:
-          card: stats
-          options: username=4Raisan&show_icons=true&hide_rank=true&hide=stars&bg_color=090B0A&title_color=34D399&text_color=A7CDBB&icon_color=34D399&border_color=26382E&border_radius=14&disable_animations=true&custom_title=Public%20GitHub%20activity
-          path: .generated/stats.svg
-          core_version: '2.1.3'
-          fail_on_error: 'true'
-          token: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/generate_stats.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate contribution snake
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
         with:
