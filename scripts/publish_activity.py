@@ -14,6 +14,10 @@ for name in ('stats.svg', 'snake.svg'):
         visible_text = ' '.join(''.join(node.itertext()) for node in doc.iter() if node.tag.endswith('}text'))
         raise ValueError(f'{name}: upstream error card: {visible_text}')
     if name == 'snake.svg':
+        x, y, width, height = doc.attrib['viewBox'].split()
+        background = f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="14" fill="#090B0A"/>'
+        end = source.index('>') + 1
+        source = source[:end] + background + source[end:]
         source = source.replace('</svg>', '<style>@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style></svg>')
     staged[name] = source
 readme_path = root / 'README.md'

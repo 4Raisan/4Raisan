@@ -37,6 +37,6 @@ icons={
 'node':('Node.js','<path d="M31 5l20 11v23L31 50 11 39V16zM22 35V20l17 15V20"/>'),
 'postgres':('PostgreSQL','<path d="M17 16q0-11 15-11t15 11v15q0 9-9 9l-2 10h-7V29q-12 2-12-13zM29 29l10-6M21 18h3M36 14h3M17 19l-7 9 9 7"/>')}
 for key,(label,path) in icons.items():
-    body=f'<g transform="translate(29 4) scale(.8)" fill="none" stroke="{GREEN}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{path}</g>'+text(54,65,label,12,MINT,'text-anchor="middle"')
+    body=rect(1,1,106,72,BG,10)+f'<g transform="translate(29 4) scale(.8)" fill="none" stroke="{GREEN}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{path}</g>'+text(54,65,label,12,MINT,'text-anchor="middle"')
     save('tool-'+key+'.svg',108,74,label,body)
 print('Built original artwork and mobile variants.')
