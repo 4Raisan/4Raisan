@@ -20,15 +20,6 @@ save('header.svg',1200,280,'Rashen Anupama — Cloud & Platform Engineering, lea
 save('header-static.svg',1200,280,'Rashen Anupama — Cloud & Platform Engineering',header.replace('class="signal"','opacity="0"'))
 mobile=rect(1,1,478,268,BG,18)+text(26,42,'4RAISAN / ENGINEERING NOTES',12,GREEN,'class="mono" letter-spacing="1"')+text(24,104,'Rashen Anupama',43,WHITE,'font-weight="700"')+text(26,148,'Cloud & Platform Engineering',25,MINT)+text(26,185,'Learning through projects.',22,MUTED)+f'<path d="M28 223h82m12 0h36m12 0h65" stroke="{BORDER}" stroke-width="3"/><circle cx="115" cy="223" r="4" fill="{GREEN}"/>'
 save('header-mobile.svg',480,270,'Rashen Anupama — Cloud & Platform Engineering, learning through projects',mobile)
-projects=[('luxora','01','Luxora','APPLICATION DELIVERY',['React / Express application with PostgreSQL,','Docker packaging, CI, and role-based access checks.'],['Docker','GitHub Actions','PostgreSQL']),('cosplay-proxy','02','cosplay-proxy','LOCAL DEVELOPER TOOLING',['Local AI proxy with FastAPI, PowerShell setup,','and diagnostic tooling for Windows.'],['Python','FastAPI','PowerShell'])]
-for name,num,title,category,lines,labels in projects:
-    body=rect(1,1,998,208)+text(30,37,num+' / '+category,13,GREEN,'class="mono" letter-spacing="1.5"')+text(30,83,title,35,WHITE,'font-weight="700"')+text(30,121,lines[0],23,MINT)+text(30,153,lines[1],23,MINT)+text(30,187,' / '.join(labels),16,MUTED,'class="mono"')+text(940,54,'↗',30,GREEN)
-    save(name+'.svg',1000,210,title+' — '+' '.join(lines),body)
-    descriptions=['React / Express + PostgreSQL','Docker packaging, CI,','and role-based access checks.'] if name=='luxora' else ['Local AI proxy with FastAPI,','PowerShell setup, and','Windows diagnostic tooling.']
-    body=rect(1,1,478,258)+text(24,33,num+' / '+category,11,GREEN,'class="mono"')+text(24,79,title,34,WHITE,'font-weight="700"')
-    for i,line in enumerate(descriptions): body+=text(24,120+i*31,line,23,MINT)
-    body+=text(24,231,' / '.join(labels),15,MUTED,'class="mono"')
-    save(name+'-mobile.svg',480,260,title+' — '+' '.join(lines),body)
 icons={
 'docker':('Docker','<path d="M16 26h31c-2 10-9 15-19 15-7 0-11-5-12-15zM44 24c1-5 6-6 8-4-1 4-4 6-8 6M20 22v-6h7v6zm10 0v-6h7v6zm0-10V6h7v6z"/>'),
 'actions':('GitHub Actions','<circle cx="20" cy="22" r="7"/><circle cx="45" cy="12" r="5"/><circle cx="45" cy="34" r="5"/><path d="M27 22h5V12h8M32 22v12h8M18 19l4 3-4 3"/>'),
