@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Generate public statistics
-        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be # v1
+        uses: readme-tools/github-readme-stats-action@94833c3d5a4b13dde2ba33224e3ea8624f474d11 # reviewed main, 2026-09-18
         with:
           card: stats
           options: username=4Raisan&show_icons=true&hide_rank=true&hide=stars&bg_color=090B0A&title_color=34D399&text_color=A7CDBB&icon_color=34D399&border_color=26382E&border_radius=14&disable_animations=true&custom_title=Public%20GitHub%20activity

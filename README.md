@@ -13,19 +13,19 @@ Moving toward cloud infrastructure, automation, and IAM.
 
 [**Luxora ↗**](https://github.com/4Raisan/Luxora_v1)
 
-<a href="https://github.com/4Raisan/Luxora_v1"><picture>
+<picture>
   <source media="(max-width: 600px)" srcset="assets/luxora-mobile.svg">
   <img src="assets/luxora.svg" alt="Luxora: React/Express application with PostgreSQL, Docker packaging, GitHub Actions, and role-based access checks." width="100%">
-</picture></a>
+</picture>
 
 [Container build](https://github.com/4Raisan/Luxora_v1/blob/main/Dockerfile) · [CI and current results](https://github.com/4Raisan/Luxora_v1/actions/workflows/ci.yml) · [Access checks](https://github.com/4Raisan/Luxora_v1/blob/main/backend/src/middleware/auth.js)
 
 [**cosplay-proxy ↗**](https://github.com/4Raisan/cosplay-proxy)
 
-<a href="https://github.com/4Raisan/cosplay-proxy"><picture>
+<picture>
   <source media="(max-width: 600px)" srcset="assets/cosplay-proxy-mobile.svg">
   <img src="assets/cosplay-proxy.svg" alt="cosplay-proxy: Local AI proxy built with FastAPI, PowerShell setup, and diagnostic tooling for Windows." width="100%">
-</picture></a>
+</picture>
 
 [Setup and architecture](https://github.com/4Raisan/cosplay-proxy#readme)
 
