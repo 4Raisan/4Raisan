@@ -1,61 +1,55 @@
-# Rashen Anupama
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/header-mobile.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/header-static.svg">
+  <img src="assets/header.svg" alt="Rashen Anupama — Cloud & Platform Engineering, learning through projects" width="100%">
+</picture>
 
-**IT undergraduate at SLTC Research University · Cloud & platform engineering focus**
+**Rashen Anupama · Cloud & Platform Engineering**  
+IT undergraduate at SLTC Research University.  
+Working on Luxora and tools for local development.  
+Moving toward cloud infrastructure, automation, and IAM.
 
-Developing toward cloud infrastructure, deployment automation, and secure developer platforms.
+### Selected work
 
-[Selected work](#selected-work) · [Engineering foundation](#engineering-foundation) · [Learning direction](#learning-direction) · [Contact](mailto:mn4raisan@gmail.com)
+[**Luxora ↗**](https://github.com/4Raisan/Luxora_v1)
 
-<img src="https://raw.githubusercontent.com/4Raisan/4Raisan/main/profile-banner.svg" alt="Cloud. Code. Control. — Rashen Anupama" width="100%" />
+<a href="https://github.com/4Raisan/Luxora_v1"><picture>
+  <source media="(max-width: 600px)" srcset="assets/luxora-mobile.svg">
+  <img src="assets/luxora.svg" alt="Luxora: React/Express application with PostgreSQL, Docker packaging, GitHub Actions, and role-based access checks." width="100%">
+</picture></a>
 
-## Selected work
+[Container build](https://github.com/4Raisan/Luxora_v1/blob/main/Dockerfile) · [CI and current results](https://github.com/4Raisan/Luxora_v1/actions/workflows/ci.yml) · [Access checks](https://github.com/4Raisan/Luxora_v1/blob/main/backend/src/middleware/auth.js)
 
-### [Luxora](https://github.com/4Raisan/Luxora_v1) — application delivery and architecture
+[**cosplay-proxy ↗**](https://github.com/4Raisan/cosplay-proxy)
 
-A home-concierge MVP connecting customers, service providers, and administrators. The repository brings together a React frontend, Express API, PostgreSQL database, and deployment configuration.
+<a href="https://github.com/4Raisan/cosplay-proxy"><picture>
+  <source media="(max-width: 600px)" srcset="assets/cosplay-proxy-mobile.svg">
+  <img src="assets/cosplay-proxy.svg" alt="cosplay-proxy: Local AI proxy built with FastAPI, PowerShell setup, and diagnostic tooling for Windows." width="100%">
+</picture></a>
 
-- **Containers:** a multi-stage Docker build packages the frontend and backend runtime.
-- **Delivery:** GitHub Actions defines secret scanning, dependency checks, frontend builds, backend tests, and Docker smoke checks.
-- **Access control:** backend middleware validates sessions and checks application roles.
-- **Architecture:** API documentation and a codebase knowledge graph explain the system and its dependencies.
+[Setup and architecture](https://github.com/4Raisan/cosplay-proxy#readme)
 
-[Container build](https://github.com/4Raisan/Luxora_v1/blob/main/Dockerfile) · [CI workflow and current results](https://github.com/4Raisan/Luxora_v1/actions/workflows/ci.yml) · [Access-control code](https://github.com/4Raisan/Luxora_v1/blob/main/backend/src/middleware/auth.js) · [Architecture documentation](https://github.com/4Raisan/Luxora_v1/blob/main/docs/architecture/TECHNICAL_ARCHITECTURE_AND_SYSTEM_DOCUMENTATION.md)
+### Tools used in these projects
 
-*MVP stage; external production integrations still require validation. See the [roadmap](https://github.com/4Raisan/Luxora_v1/blob/main/docs/planning/roadmap.md) for limitations.*
+<p>
+  <img src="assets/tool-docker.svg" alt="Docker" width="108" height="74">
+  <img src="assets/tool-actions.svg" alt="GitHub Actions" width="108" height="74">
+  <img src="assets/tool-python.svg" alt="Python" width="108" height="74">
+  <img src="assets/tool-powershell.svg" alt="PowerShell" width="108" height="74">
+  <img src="assets/tool-node.svg" alt="Node.js" width="108" height="74">
+  <img src="assets/tool-postgres.svg" alt="PostgreSQL" width="108" height="74">
+</p>
 
-### [Cosplay Proxy](https://github.com/4Raisan/cosplay-proxy) — local developer tooling
+These tools reflect work in the repositories above. Cloud infrastructure and IAM are the direction I’m developing toward; the project links show what I’ve built so far.
 
-A Windows-based AI provider proxy with a FastAPI service, administration UI, and command-line launcher. Its source includes provider routing, configuration management, diagnostics, and PowerShell setup automation.
+### GitHub activity
 
-**Relevant to my direction:** making local development tools easier to configure, launch, and troubleshoot.
+<img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="460">
 
-### [Smart City Algorithms](https://github.com/4Raisan/Smart-City-Algorithms) — computing foundations
+<img src="assets/snake.svg" alt="Animated snake tracing 4Raisan’s GitHub contribution graph" width="100%">
 
-A Java group assignment covering route planning, sorting, and performance analysis. My documented responsibility was **sorting algorithms and performance comparison**.
+<sub>Public activity, refreshed daily. <!-- activity-date -->First refresh pending<!-- /activity-date -->. Activity counts describe participation, not skill level.</sub>
 
-## Engineering foundation
+### Contact
 
-| Area | Evidence in my repositories |
-| --- | --- |
-| Automation and tooling | Python and PowerShell in Cosplay Proxy |
-| Containers and CI | Docker and GitHub Actions in Luxora |
-| APIs and data | FastAPI; Express, PostgreSQL, and Prisma |
-| Application access control | Session validation and role checks in Luxora |
-| Algorithms and teamwork | Java sorting implementations and documented group responsibilities |
-
-Luxora's documented deployment architecture uses **Vercel, Northflank, and Neon**.
-
-## Learning direction
-
-My path is **cloud foundations → infrastructure automation → platform engineering**, with security throughout.
-
-- **Foundations:** Linux, networking, and cloud infrastructure.
-- **Automation:** infrastructure as code, repeatable deployments, and CI/CD.
-- **Platforms:** container orchestration, observability, and developer workflows.
-- **Security:** IAM, least privilege, secrets management, and secure delivery.
-
-Longer term, I want to grow into cloud architecture through practical experience with operating systems, deployment trade-offs, and security boundaries.
-
-## Connect
-
-[Email](mailto:mn4raisan@gmail.com) · [All repositories](https://github.com/4Raisan?tab=repositories)
+[Email me](mailto:mn4raisan@gmail.com) · [Browse my repositories](https://github.com/4Raisan?tab=repositories)
