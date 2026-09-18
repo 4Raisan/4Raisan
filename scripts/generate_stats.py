@@ -9,6 +9,7 @@ query = '''query {
   user(login: "4Raisan") {
     contributionsCollection {
       startedAt endedAt
+      contributionCalendar { weeks { contributionDays { date weekday } } }
       totalCommitContributions
       totalPullRequestContributions
       totalIssueContributions
@@ -41,4 +42,5 @@ svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="300" height="224" viewBox
 out = Path(__file__).resolve().parents[1] / '.generated'
 out.mkdir(exist_ok=True)
 (out/'stats.svg').write_text(svg,encoding='utf-8')
-print('Generated public contribution statistics for', period)
+(out/'calendar.json').write_text(json.dumps(data['contributionCalendar']), encoding='utf-8')
+print('Generated public contribution statistics and calendar for', period)
