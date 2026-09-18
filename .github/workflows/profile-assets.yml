@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/profile-assets.yml'
       - 'scripts/publish_activity.py'
+      - 'scripts/generate_stats.py'
 permissions:
   contents: write
 concurrency:

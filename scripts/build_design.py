@@ -20,14 +20,4 @@ save('header.svg',1200,280,'Rashen Anupama — Cloud & Platform Engineering, lea
 save('header-static.svg',1200,280,'Rashen Anupama — Cloud & Platform Engineering',header.replace('class="signal"','opacity="0"'))
 mobile=rect(1,1,478,268,BG,18)+text(26,42,'4RAISAN / ENGINEERING NOTES',12,GREEN,'class="mono" letter-spacing="1"')+text(24,104,'Rashen Anupama',43,WHITE,'font-weight="700"')+text(26,148,'Cloud & Platform Engineering',25,MINT)+text(26,185,'Learning through projects.',22,MUTED)+f'<path d="M28 223h82m12 0h36m12 0h65" stroke="{BORDER}" stroke-width="3"/><circle cx="115" cy="223" r="4" fill="{GREEN}"/>'
 save('header-mobile.svg',480,270,'Rashen Anupama — Cloud & Platform Engineering, learning through projects',mobile)
-icons={
-'docker':('Docker','<path d="M16 26h31c-2 10-9 15-19 15-7 0-11-5-12-15zM44 24c1-5 6-6 8-4-1 4-4 6-8 6M20 22v-6h7v6zm10 0v-6h7v6zm0-10V6h7v6z"/>'),
-'actions':('GitHub Actions','<circle cx="20" cy="22" r="7"/><circle cx="45" cy="12" r="5"/><circle cx="45" cy="34" r="5"/><path d="M27 22h5V12h8M32 22v12h8M18 19l4 3-4 3"/>'),
-'python':('Python','<path d="M19 24V12q0-6 10-6h8q5 0 5 6v12H28v7H16q-6 0-6-8t6-8h3M42 20h7q6 0 6 8t-6 8h-7v5q0 6-10 6h-8q-5 0-5-6v-6h14v-7h9z"/><circle cx="27" cy="12" r="1"/><circle cx="35" cy="41" r="1"/>'),
-'powershell':('PowerShell','<path d="M16 8h36l-9 35H7zM23 17l9 8-15 8M30 35h10"/>'),
-'node':('Node.js','<path d="M31 5l20 11v23L31 50 11 39V16zM22 35V20l17 15V20"/>'),
-'postgres':('PostgreSQL','<path d="M17 16q0-11 15-11t15 11v15q0 9-9 9l-2 10h-7V29q-12 2-12-13zM29 29l10-6M21 18h3M36 14h3M17 19l-7 9 9 7"/>')}
-for key,(label,path) in icons.items():
-    body=rect(1,1,106,72,BG,10)+f'<g transform="translate(29 4) scale(.8)" fill="none" stroke="{GREEN}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{path}</g>'+text(54,65,label,12,MINT,'text-anchor="middle"')
-    save('tool-'+key+'.svg',108,74,label,body)
-print('Built original artwork and mobile variants.')
+print('Built original header artwork and mobile variant.')

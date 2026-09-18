@@ -26,21 +26,22 @@ Local AI proxy built with FastAPI, PowerShell setup, and diagnostic tooling for 
 ### Tools used in these projects
 
 <p>
-  <img src="assets/tool-docker.svg" alt="Docker" width="108" height="74">
-  <img src="assets/tool-actions.svg" alt="GitHub Actions" width="108" height="74">
-  <img src="assets/tool-python.svg" alt="Python" width="108" height="74">
-  <img src="assets/tool-powershell.svg" alt="PowerShell" width="108" height="74">
-  <img src="assets/tool-node.svg" alt="Node.js" width="108" height="74">
-  <img src="assets/tool-postgres.svg" alt="PostgreSQL" width="108" height="74">
+  <img src="assets/tool-docker.svg" alt="Docker" width="40" height="40">
+  <img src="assets/tool-actions.svg" alt="GitHub Actions" width="40" height="40">
+  <img src="assets/tool-python.svg" alt="Python" width="40" height="40">
+  <img src="assets/tool-powershell.svg" alt="PowerShell" width="40" height="40">
+  <img src="assets/tool-node.svg" alt="Node.js" width="40" height="40">
+  <img src="assets/tool-postgres.svg" alt="PostgreSQL" width="40" height="40">
 </p>
 
 These tools reflect work in the repositories above. Cloud infrastructure and IAM are the direction I’m developing toward; the project links show what I’ve built so far.
 
 ### GitHub activity
 
-<img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="460">
-
-<img src="assets/snake.svg" alt="Animated snake tracing 4Raisan’s GitHub contribution graph" width="100%">
+<p>
+  <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="240" align="middle">
+  <img src="assets/snake.svg" alt="Animated snake tracing 4Raisan’s GitHub contribution graph" width="420" align="middle">
+</p>
 
 <sub>Public activity, refreshed daily. <!-- activity-date -->Updated 2026-09-18 UTC<!-- /activity-date -->. Activity counts describe participation, not skill level.</sub>
 
