@@ -11,7 +11,8 @@ for name in ('stats.svg', 'snake.svg'):
     if doc.tag != '{http://www.w3.org/2000/svg}svg':
         raise ValueError(f'{name}: not SVG')
     if 'something went wrong' in source.lower() or 'could not fetch' in source.lower():
-        raise ValueError(f'{name}: upstream error card')
+        visible_text = ' '.join(''.join(node.itertext()) for node in doc.iter() if node.tag.endswith('}text'))
+        raise ValueError(f'{name}: upstream error card: {visible_text}')
     if name == 'snake.svg':
         source = source.replace('</svg>', '<style>@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style></svg>')
     staged[name] = source
