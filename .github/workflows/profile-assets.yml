@@ -1,7 +1,7 @@
 name: Refresh profile activity
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
   push:
     paths:
@@ -24,13 +24,6 @@ jobs:
       # public contribution fields; keep the same scheduled, committed SVG model.
       - name: Generate public statistics
         run: python3 scripts/generate_stats.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Generate contribution snake
-        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
-        with:
-          github_user_name: 4Raisan
-          outputs: .generated/snake.svg?color_snake=#A7CDBB&color_dots=#141916,#174B36,#187D52,#24AA73,#34D399
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Validate and publish both assets
