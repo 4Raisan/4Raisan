@@ -21,7 +21,7 @@ query = '''query($from: DateTime!, $to: DateTime!) {
 }'''
 local_now = datetime.now(timezone(timedelta(hours=5, minutes=30)))
 start = local_now.replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=365)
-variables = {'from': start.astimezone(timezone.utc).isoformat(), 'to': local_now.astimezone(timezone.utc).isoformat()}
+variables = {'from': start.astimezone(timezone.utc).isoformat(), 'to': local_now.replace(hour=23, minute=59, second=59, microsecond=0).astimezone(timezone.utc).isoformat()}
 request = Request('https://api.github.com/graphql',
     data=json.dumps({'query': query, 'variables': variables}).encode(),
     headers={'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN'],
