@@ -40,11 +40,13 @@ These tools reflect work in the repositories above. Cloud infrastructure and IAM
 
 <p>
   <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="30%" align="middle">
-  <img src="assets/snake.svg" alt="Static GitHub contribution calendar for 4Raisan" width="69%" align="middle">
+  <img src="assets/calendar.svg" alt="Static GitHub contribution calendar for 4Raisan" width="69%" align="middle">
 </p>
 
-<sub>Public activity snapshot, refreshed every six hours. Calendar dates come directly from GitHub; backdated contributions appear after GitHub processes them. <!-- activity-date -->Updated 2026-10-18 21:22 Sri Lanka time (UTC+05:30)<!-- /activity-date -->. Activity counts describe participation, not skill level.</sub>
+<sub>Public activity snapshot, refreshed every six hours. Calendar dates come directly from GitHub; backdated contributions appear after GitHub processes them. <!-- activity-date -->Updated 2026-10-19 00:58 Sri Lanka time (UTC+05:30)<!-- /activity-date -->. Activity counts describe participation, not skill level.</sub>
 
 ### Contact
 
 [Email me](mailto:mn4raisan@gmail.com) · [Browse my repositories](https://github.com/4Raisan?tab=repositories)
+
+<sub>[Profile maintenance](MAINTENANCE.md)</sub>
