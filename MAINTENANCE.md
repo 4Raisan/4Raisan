@@ -85,9 +85,14 @@ published profile.
 
 ## Contribution snake
 
-The animated snake is generated locally from the same GitHub calendar response as
-the statistics. It sweeps adjacent calendar cells, clears them as it passes, and
-loops every 40 seconds. No external animation service or extra token is needed.
-The profile uses assets/snake.svg by default and assets/calendar.svg for visitors
-who request reduced motion. Original contribution counts remain in cell titles.
-Publishing verifies the animation against the snapshot before replacing files.
+The original Platane/snk action generates the snake using the original pinned
+revision and emerald palette. Its pathfinding animation is preserved, including
+the contribution collection bar. The publisher adds the original dark frame,
+year heading, and month labels. The profile uses assets/snake.svg by default and
+assets/calendar.svg when reduced motion is requested.
+
+The action fetches its own GitHub contribution snapshot, so it may briefly differ
+from the statistics while GitHub processes activity. Local statistics generation
+does not generate a replacement snake. To publish locally, first obtain a fresh
+raw Platane SVG at .generated/snake.svg, or use the GitHub workflow for the full
+refresh. Keep the last published snake if upstream generation fails.
