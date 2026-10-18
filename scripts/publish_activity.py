@@ -6,6 +6,7 @@ import re
 import tempfile
 import xml.etree.ElementTree as ET
 from activity import ROOT, COUNTS, validate_calendar
+from snake import render as render_snake
 
 NS = '{http://www.w3.org/2000/svg}'
 
@@ -26,7 +27,10 @@ def recover(root):
     journal = root / '.generated/publish-backup.json'
     if journal.exists():
         for relative, content in json.loads(journal.read_text(encoding='utf-8')).items():
-            atomic_write(root / relative, content)
+            if content is None:
+                (root / relative).unlink(missing_ok=True)
+            else:
+                atomic_write(root / relative, content)
         journal.unlink()
 
 
@@ -36,11 +40,16 @@ def publish(root=ROOT):
     calendar = json.loads((root / '.generated/calendar.json').read_text(encoding='utf-8'))
     validate_calendar(calendar)
     staged = {}
-    for name in ('stats.svg', 'calendar.svg'):
+    for name in ('stats.svg', 'calendar.svg', 'snake.svg'):
         source = (root / '.generated' / name).read_text(encoding='utf-8')
         doc = ET.fromstring(source)
         if doc.tag != NS + 'svg':
             raise ValueError('Invalid SVG')
+        if name == 'snake.svg':
+            if source != render_snake(calendar):
+                raise ValueError('Snake animation does not match the contribution snapshot')
+            staged['assets/' + name] = source
+            continue
         if any(node.tag.startswith(NS + 'animate') or node.tag == NS + 'set' for node in doc.iter()):
             raise ValueError('Activity graphics must be static')
         if name == 'calendar.svg':
@@ -71,7 +80,7 @@ def publish(root=ROOT):
     if count != 1:
         raise ValueError('Expected one date marker')
     staged['README.md'] = readme
-    backup = {name: (root / name).read_text(encoding='utf-8') for name in staged}
+    backup = {name: (root / name).read_text(encoding='utf-8') if (root / name).exists() else None for name in staged}
     journal = root / '.generated/publish-backup.json'
     atomic_write(journal, json.dumps(backup))
     try:
@@ -81,7 +90,7 @@ def publish(root=ROOT):
         recover(root)
         raise
     journal.unlink()
-    print('Validated both cards:', calendar['totalContributions'], 'contributions')
+    print('Validated activity assets:', calendar['totalContributions'], 'contributions')
 
 
 if __name__ == '__main__':

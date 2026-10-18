@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import activity
 import generate_stats
 import publish_activity
+import xml.etree.ElementTree as ET
 
 
 def snapshot():
@@ -43,6 +44,37 @@ class ActivityTests(unittest.TestCase):
         publish_activity.publish(self.root)
         self.assertIn('2024-02-29: 2 contributions', (self.root / 'assets/calendar.svg').read_text())
         self.assertIn('2024-03-01', (self.root / 'README.md').read_text())
+
+    def test_snake_has_motion_and_preserves_calendar_dates(self):
+        doc = ET.parse(self.root / '.generated/snake.svg')
+        ns = '{http://www.w3.org/2000/svg}'
+        self.assertEqual(len(list(doc.iter(ns + 'animateMotion'))), 6)
+        self.assertEqual(len(list(doc.iter(ns + 'animate'))), 3)
+        titles = [node.text for node in doc.iter(ns + 'title')]
+        self.assertIn('2024-02-29: 2 contributions', titles)
+        publish_activity.publish(self.root)
+        self.assertTrue((self.root / 'assets/snake.svg').exists())
+
+    def test_tampered_snake_does_not_publish(self):
+        before = self.originals()
+        path = self.root / '.generated/snake.svg'
+        path.write_text(path.read_text().replace('animateMotion', 'missingMotion'))
+        with self.assertRaisesRegex(ValueError, 'Snake animation'):
+            publish_activity.publish(self.root)
+        self.assertEqual(before, self.originals())
+
+    def test_failed_first_snake_publish_removes_new_file(self):
+        before = self.originals()
+        real = os.replace
+        def fail_readme(source, target):
+            if Path(target).name == 'README.md' and not getattr(fail_readme, 'failed', False):
+                fail_readme.failed = True
+                raise OSError('simulated failure after creating snake')
+            return real(source, target)
+        with patch('publish_activity.os.replace', side_effect=fail_readme):
+            with self.assertRaises(OSError):
+                publish_activity.publish(self.root)
+        self.assertEqual(before, self.originals())
 
     def test_invalid_statistics_leave_published_files_unchanged(self):
         before = self.originals()

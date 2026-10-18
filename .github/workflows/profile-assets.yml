@@ -31,13 +31,13 @@ jobs:
         run: python3 scripts/generate_stats.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Validate and publish both assets
+      - name: Validate and publish activity assets
         run: python3 scripts/publish_activity.py
       - name: Commit changed assets
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/stats.svg assets/calendar.svg assets/header.svg assets/header-static.svg assets/header-mobile.svg README.md
+          git add assets/stats.svg assets/calendar.svg assets/snake.svg assets/header.svg assets/header-static.svg assets/header-mobile.svg README.md
           if ! git diff --cached --quiet; then
             git commit -m "Refresh public profile activity"
             git push
