@@ -36,6 +36,17 @@ class ActivityTests(unittest.TestCase):
         for name in ('stats.svg', 'calendar.svg'):
             (self.root / 'assets' / name).write_text('old ' + name, encoding='utf-8')
         generate_stats.generate(self.root, snapshot(), datetime(2024, 3, 1, tzinfo=timezone.utc))
+        fixture = Path(__file__).parent / 'fixtures/original-snake.svg'
+        doc = ET.fromstring(fixture.read_text())
+        cells = [n for n in doc if 'c' in n.get('class', '').split()]
+        first = min(float(n.attrib['x']) for n in cells)
+        for cell in cells:
+            if float(cell.attrib['x']) != first:
+                doc.remove(cell)
+        # Preserve CSS and original snake segments, limiting the calendar to one week.
+        raw = ET.tostring(doc, encoding='unicode').replace('ns0:', '').replace(':ns0', '')
+        (self.root / '.generated/snake.svg').write_text(raw)
+
 
     def originals(self):
         return {p: p.read_bytes() for p in [self.root / 'README.md', *sorted((self.root / 'assets').glob('*'))]}
@@ -45,21 +56,22 @@ class ActivityTests(unittest.TestCase):
         self.assertIn('2024-02-29: 2 contributions', (self.root / 'assets/calendar.svg').read_text())
         self.assertIn('2024-03-01', (self.root / 'README.md').read_text())
 
-    def test_snake_has_motion_and_preserves_calendar_dates(self):
-        doc = ET.parse(self.root / '.generated/snake.svg')
-        ns = '{http://www.w3.org/2000/svg}'
-        self.assertEqual(len(list(doc.iter(ns + 'animateMotion'))), 6)
-        self.assertEqual(len(list(doc.iter(ns + 'animate'))), 3)
-        titles = [node.text for node in doc.iter(ns + 'title')]
-        self.assertIn('2024-02-29: 2 contributions', titles)
+    def test_original_snake_animation_is_preserved(self):
+        raw = (self.root / '.generated/snake.svg').read_text()
         publish_activity.publish(self.root)
-        self.assertTrue((self.root / 'assets/snake.svg').exists())
+        published = (self.root / 'assets/snake.svg').read_text()
+        self.assertIn('Generated with https://github.com/Platane/snk', published)
+        ns = '{http://www.w3.org/2000/svg}'
+        old_styles = [n.text for n in ET.fromstring(raw).iter(ns + 'style')]
+        new_styles = [n.text for n in ET.fromstring(published).iter(ns + 'style')]
+        self.assertTrue(all(style in new_styles for style in old_styles))
+        self.assertIn('Contributions', published)
 
     def test_tampered_snake_does_not_publish(self):
         before = self.originals()
         path = self.root / '.generated/snake.svg'
-        path.write_text(path.read_text().replace('animateMotion', 'missingMotion'))
-        with self.assertRaisesRegex(ValueError, 'Snake animation'):
+        path.write_text(path.read_text().replace('Generated with https://github.com/Platane/snk', 'invalid generator'))
+        with self.assertRaisesRegex(ValueError, 'original Platane'):
             publish_activity.publish(self.root)
         self.assertEqual(before, self.originals())
 

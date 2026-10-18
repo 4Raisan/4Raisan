@@ -4,7 +4,6 @@ from html import escape
 from datetime import datetime, timezone, timedelta
 from calendar import month_abbr
 from activity import ROOT, load_config, fetch, validate_data
-from snake import render as render_snake
 
 query = '''query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
@@ -72,7 +71,6 @@ def generate(root=ROOT, result=None, now=None):
     body += f'<text x="18" y="198" fill="#A5AEA8" font-size="12">{period} · GitHub calendar dates</text>'
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="224" viewBox="0 0 {width} 224" role="img"><title>GitHub contribution calendar</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
     (out/'calendar.svg').write_text(svg,encoding='utf-8')
-    (out/'snake.svg').write_text(render_snake(calendar), encoding='utf-8')
     calendar['refreshedAt'] = local_now.strftime('%Y-%m-%d %H:%M ') + config['timezone_label']
     calendar['statistics'] = {key: data[key] for _, key in rows}
     (out/'calendar.json').write_text(json.dumps(calendar),encoding='utf-8')

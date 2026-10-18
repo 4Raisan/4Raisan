@@ -31,6 +31,15 @@ jobs:
         run: python3 scripts/generate_stats.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Read snake profile account
+        run: python3 -c "import json, os; c=json.load(open('profile.json')); open(os.environ['GITHUB_ENV'], 'a').write('SNAKE_USERNAME=' + c['username'] + '\n')"
+      - name: Generate original contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3, original generator
+        with:
+          github_user_name: ${{ env.SNAKE_USERNAME }}
+          outputs: .generated/snake.svg?color_snake=#A7CDBB&color_dots=#141916,#174B36,#187D52,#24AA73,#34D399
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Validate and publish activity assets
         run: python3 scripts/publish_activity.py
       - name: Commit changed assets

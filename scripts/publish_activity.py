@@ -6,7 +6,7 @@ import re
 import tempfile
 import xml.etree.ElementTree as ET
 from activity import ROOT, COUNTS, validate_calendar
-from snake import render as render_snake
+from snake import prepare as prepare_snake
 
 NS = '{http://www.w3.org/2000/svg}'
 
@@ -46,9 +46,7 @@ def publish(root=ROOT):
         if doc.tag != NS + 'svg':
             raise ValueError('Invalid SVG')
         if name == 'snake.svg':
-            if source != render_snake(calendar):
-                raise ValueError('Snake animation does not match the contribution snapshot')
-            staged['assets/' + name] = source
+            staged['assets/' + name] = prepare_snake(source, calendar)
             continue
         if any(node.tag.startswith(NS + 'animate') or node.tag == NS + 'set' for node in doc.iter()):
             raise ValueError('Activity graphics must be static')
