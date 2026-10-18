@@ -6,8 +6,9 @@ on:
   push:
     paths:
       - '.github/workflows/profile-assets.yml'
-      - 'scripts/publish_activity.py'
-      - 'scripts/generate_stats.py'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'profile.json'
 permissions:
   contents: write
 concurrency:
@@ -19,6 +20,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Test activity refresh
+        run: python3 -m unittest discover -s tests -v
+      - name: Generate profile artwork
+        run: python3 scripts/build_design.py
       # The upstream stats action queries stargazers on other repositories,
       # which GitHub denies to this repository's built-in token. Fetch only
       # public contribution fields; keep the same scheduled, committed SVG model.
@@ -32,7 +37,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/stats.svg assets/snake.svg README.md
+          git add assets/stats.svg assets/calendar.svg assets/header.svg assets/header-static.svg assets/header-mobile.svg README.md
           if ! git diff --cached --quiet; then
             git commit -m "Refresh public profile activity"
             git push
