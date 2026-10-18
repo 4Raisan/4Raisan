@@ -40,10 +40,13 @@ These tools reflect work in the repositories above. Cloud infrastructure and IAM
 
 <p>
   <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="30%" align="middle">
-  <img src="assets/calendar.svg" alt="Static GitHub contribution calendar for 4Raisan" width="69%" align="middle">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/calendar.svg">
+    <img src="assets/snake.svg" alt="Animated snake eating the GitHub contribution calendar for 4Raisan" width="69%" align="middle">
+  </picture>
 </p>
 
-<sub>Public activity snapshot, refreshed every six hours. Calendar dates come directly from GitHub; backdated contributions appear after GitHub processes them. <!-- activity-date -->Updated 2026-10-19 00:59 Sri Lanka time (UTC+05:30)<!-- /activity-date -->. Activity counts describe participation, not skill level.</sub>
+<sub>Public activity snapshot, refreshed every six hours. The snake loops over the same contribution snapshot. Calendar dates come directly from GitHub; backdated contributions appear after GitHub processes them. <!-- activity-date -->Updated 2026-10-19 01:03 Sri Lanka time (UTC+05:30)<!-- /activity-date -->. Activity counts describe participation, not skill level.</sub>
 
 ### Contact
 

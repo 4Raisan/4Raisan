@@ -46,10 +46,10 @@ try {
 
 Generation writes ignored staging files under .generated/. Publishing validates
 the calendar, statistics, dates, SVGs, and README timestamp marker before updating
-assets/stats.svg, assets/calendar.svg, and README.md.
+assets/stats.svg, assets/calendar.svg, assets/snake.svg, and README.md.
 
 Each replacement is atomic. A journal retains the previous snapshot until all
-three writes finish; a caught failure rolls back, and the next publishing attempt
+four writes finish; a caught failure rolls back, and the next publishing attempt
 recovers after a process interruption. Multiple files cannot change atomically as
 one filesystem operation. Do not run publishers concurrently or delete .generated/
 while its publish-backup.json recovery journal exists.
@@ -82,3 +82,12 @@ The tests use synthetic responses and temporary folders, including leap-day date
 network failures, invalid statistics, interrupted publishing, and rollback failures
 at the file-replacement boundary. They do not require credentials or modify the
 published profile.
+
+## Contribution snake
+
+The animated snake is generated locally from the same GitHub calendar response as
+the statistics. It sweeps adjacent calendar cells, clears them as it passes, and
+loops every 40 seconds. No external animation service or extra token is needed.
+The profile uses assets/snake.svg by default and assets/calendar.svg for visitors
+who request reduced motion. Original contribution counts remain in cell titles.
+Publishing verifies the animation against the snapshot before replacing files.
