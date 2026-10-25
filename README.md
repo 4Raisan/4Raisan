@@ -6,30 +6,36 @@
 
 **Rashen Anupama · Cloud & Platform Engineering**  
 IT undergraduate at SLTC Research University.  
-Working on Luxora and tools for local development.  
+Building web applications and practical tools for everyday tasks.<br>
 Moving toward cloud infrastructure, automation, and IAM.
 
 ### Selected work
 
 [**Luxora ↗**](https://github.com/4Raisan/Luxora_v1)
 
-React/Express application with PostgreSQL, Docker packaging, GitHub Actions, and role-based access checks.
+Home-concierge platform built with React, Express, Prisma and PostgreSQL. Customer, provider and administrator roles, with server-side access and KYC checks. Frontend hosted on Vercel, backend on Northflank and database on Supabase.
+
+[Live site](https://luxora.bond) · [Architecture explorer](https://4raisan.github.io/Luxora_v1/architecture/) · [Knowledge graph](https://4raisan.github.io/Luxora_v1/)
 
 [Container build](https://github.com/4Raisan/Luxora_v1/blob/main/Dockerfile) · [CI and current results](https://github.com/4Raisan/Luxora_v1/actions/workflows/ci.yml) · [Access checks](https://github.com/4Raisan/Luxora_v1/blob/main/backend/src/middleware/auth.js)
 
-[**cosplay-proxy ↗**](https://github.com/4Raisan/cosplay-proxy)
+[**YakKeeper ↗**](https://github.com/4Raisan/YakKeeper)
 
-Local AI proxy built with FastAPI, PowerShell setup, and diagnostic tooling for Windows.
+Project discovery and collaboration hub built with Next.js and Supabase. GitHub sign-in, owner and member permissions, team task boards and administrator moderation. Joining a project does not grant GitHub repository access.
 
-[Setup and architecture](https://github.com/4Raisan/cosplay-proxy#readme)
+[Live site](https://yakkeeper.vercel.app/) · [Setup and deployment](https://github.com/4Raisan/YakKeeper#deploy-your-own-instance) · [Security policy](https://github.com/4Raisan/YakKeeper/blob/main/.github/SECURITY.md)
+
+[**Quick Drop 11 ↗**](https://github.com/4Raisan/Quick-Drop-11)
+
+Temporary text, image and PDF sharing between devices, built with Node.js and Supabase. Four-digit share IDs, uploads up to 5 MB and 11-hour expiry, with direct uploads, signed download links and retry handling. The sharing feed is public.
+
+[Live site](https://quickdrop11.vercel.app/) · [Architecture](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/ARCHITECTURE.md) · [Deployment and maintenance](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/OPERATIONS.md)
 
 ### Tools used in these projects
 
 <p>
   <img src="assets/tool-docker.svg" alt="Docker" width="40" height="40">
   <img src="assets/tool-actions.svg" alt="GitHub Actions" width="40" height="40">
-  <img src="assets/tool-python.svg" alt="Python" width="40" height="40">
-  <img src="assets/tool-powershell.svg" alt="PowerShell" width="40" height="40">
   <img src="assets/tool-node.svg" alt="Node.js" width="40" height="40">
   <img src="assets/tool-postgres.svg" alt="PostgreSQL" width="40" height="40">
 </p>
