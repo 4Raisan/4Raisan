@@ -30,18 +30,17 @@ def generate(root=ROOT, result=None, now=None):
     validate_data(data)
     rows = [('Commits', 'totalCommitContributions'), ('Pull requests', 'totalPullRequestContributions'),
             ('Issues', 'totalIssueContributions'), ('Code reviews', 'totalPullRequestReviewContributions')]
-    body = '<rect x="1" y="1" width="298" height="222" rx="14" fill="#090B0A" stroke="#26382E"/>'
-    body += '<text x="24" y="36" fill="#34D399" font-size="19" font-weight="700">Public GitHub activity</text>'
+    body = '<rect x="1" y="1" width="234" height="222" rx="14" fill="#090B0A" stroke="#26382E"/>'
     days = [d for w in data['contributionCalendar']['weeks'] for d in w['contributionDays']]
     period = days[0]['date'] + ' — ' + days[-1]['date']
-    body += f'<text x="24" y="61" fill="#A5AEA8" font-size="12">{escape(period)}</text>'
+    body += f'<text x="24" y="32" fill="#A5AEA8" font-size="12">{escape(period)}</text>'
     for i,(label,key) in enumerate(rows):
         value = data[key]
         if type(value) is not int or value < 0:
             raise ValueError(f'Invalid count: {key}')
-        y = 96+i*33
-        body += f'<circle cx="27" cy="{y-5}" r="3" fill="#34D399"/><text x="42" y="{y}" fill="#A7CDBB" font-size="15">{label}</text><text x="269" y="{y}" text-anchor="end" fill="#F4F7F5" font-size="16" font-weight="700">{value:,}</text>'
-    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="300" height="224" viewBox="0 0 300 224" role="img"><title>{escape(config['username'])} public GitHub activity from {escape(period)}</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
+        y = 70+i*41
+        body += f'<circle cx="27" cy="{y-5}" r="3" fill="#34D399"/><text x="42" y="{y}" fill="#A7CDBB" font-size="15">{label}</text><text x="210" y="{y}" text-anchor="end" fill="#F4F7F5" font-size="16" font-weight="700">{value:,}</text>'
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="236" height="224" viewBox="0 0 236 224" role="img"><title>{escape(config['username'])} public GitHub activity from {escape(period)}</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
     out = root / '.generated'
     out.mkdir(exist_ok=True)
     (out/'stats.svg').write_text(svg,encoding='utf-8')
@@ -54,7 +53,7 @@ def generate(root=ROOT, result=None, now=None):
         raise ValueError('Calendar total mismatch')
     colors = dict(zip(['NONE','FIRST_QUARTILE','SECOND_QUARTILE','THIRD_QUARTILE','FOURTH_QUARTILE'], ['#141916','#174B36','#187D52','#24AA73','#34D399']))
     width = 36 + len(weeks)*14
-    body = f'<rect width="{width}" height="224" rx="14" fill="#090B0A"/><text x="18" y="34" fill="#A7CDBB" font-size="18">{calendar["totalContributions"]:,} contributions</text>'
+    body = f'<rect width="{width}" height="198" rx="14" fill="#090B0A"/><text x="18" y="34" fill="#A7CDBB" font-size="18">{calendar["totalContributions"]:,} contributions</text>'
     previous = None
     last_label = -3
     for i, week in enumerate(weeks):
@@ -68,8 +67,8 @@ def generate(root=ROOT, result=None, now=None):
         previous = month
         for d in dates:
             body += f'<rect x="{x}" y="{72+d["weekday"]*14}" width="11" height="11" rx="2" fill="{colors[d["contributionLevel"]]}"><title>{d["date"]}: {d["contributionCount"]} contributions</title></rect>'
-    body += f'<text x="18" y="198" fill="#A5AEA8" font-size="12">{period} · GitHub calendar dates</text>'
-    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="224" viewBox="0 0 {width} 224" role="img"><title>GitHub contribution calendar</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
+    body += f'<text x="18" y="182" fill="#A5AEA8" font-size="12">{period} · GitHub calendar dates</text>'
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="198" viewBox="0 0 {width} 198" role="img"><title>GitHub contribution calendar</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
     (out/'calendar.svg').write_text(svg,encoding='utf-8')
     calendar['refreshedAt'] = local_now.strftime('%Y-%m-%d %H:%M ') + config['timezone_label']
     calendar['statistics'] = {key: data[key] for _, key in rows}

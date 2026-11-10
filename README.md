@@ -62,8 +62,11 @@ Temporary text, image and PDF sharing between devices. Node.js and Supabase, wit
 ### GitHub activity
 
 <p>
-  <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="30%" align="middle">
-  <img src="assets/calendar.svg" alt="GitHub contribution calendar for 4Raisan" width="69%" align="middle">
+  <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="21%" align="middle">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/calendar.svg">
+    <img src="assets/snake.svg" alt="GitHub contribution calendar with an animated snake and glowing cells" width="78%" align="middle">
+  </picture>
 </p>
 
 <sub><!-- activity-date -->Updated 2026-11-11 02:46 Sri Lanka time (UTC+05:30)<!-- /activity-date --> · [Profile maintenance](MAINTENANCE.md)</sub>

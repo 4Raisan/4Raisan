@@ -43,6 +43,7 @@ class ActivityTests(unittest.TestCase):
         for cell in cells:
             if float(cell.attrib['x']) != first:
                 doc.remove(cell)
+        next(cell for cell in cells if float(cell.attrib["x"]) == first).set("class", "c c0")
         # Preserve CSS and original snake segments, limiting the calendar to one week.
         raw = ET.tostring(doc, encoding='unicode').replace('ns0:', '').replace(':ns0', '')
         (self.root / '.generated/snake.svg').write_text(raw)
@@ -66,6 +67,12 @@ class ActivityTests(unittest.TestCase):
         new_styles = [n.text for n in ET.fromstring(published).iter(ns + 'style')]
         self.assertTrue(all(style in new_styles for style in old_styles))
         self.assertIn('Contributions', published)
+        glow_style = next(style for style in new_styles if 'drop-shadow' in style)
+        for node in ET.fromstring(raw):
+            classes = node.get('class', '').split()
+            if len(classes) == 2 and classes[0] == 'c':
+                self.assertIn('@keyframes ' + classes[1] + '{', glow_style)
+        self.assertNotIn('fill:var(--ce)', glow_style)
 
     def test_tampered_snake_does_not_publish(self):
         before = self.originals()

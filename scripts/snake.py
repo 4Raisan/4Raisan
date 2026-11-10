@@ -1,7 +1,24 @@
-"""Validate and frame the original Platane/snk SVG without changing its animation."""
+"""Validate and frame the original Platane/snk SVG and make eaten cells glow."""
 import re
 from calendar import month_abbr
 import xml.etree.ElementTree as ET
+
+
+def glow_styles(source, cells):
+    # Reuse Platane's bite timing and override only the contribution keyframes.
+    bites = {name: (before, color, after) for name, before, color, after in re.findall(
+        r'@keyframes (c[0-9a-z]+)\{([\d.]+)%\{fill:(var\(--c[1-4]\))\}'
+        r'([\d.]+)%,100%\{fill:var\(--ce\)\}\}', source)}
+    cell_names = {name for cell in cells for name in cell.get('class', '').split() if name != 'c'}
+    if not cell_names <= bites.keys():
+        raise ValueError('Missing bite timing for contribution cells')
+    rules = []
+    for name in sorted(cell_names):
+        before, color, after = bites[name]
+        rules.append(f'@keyframes {name}{{0%,{before}%{{fill:{color};filter:none}}'
+                     f'{after}%,100%{{fill:#9CF9CA;filter:drop-shadow(0 0 2px #34D399) '
+                     'drop-shadow(0 0 4px #34D399)}}')
+    return ''.join(rules)
 
 
 def prepare(source, calendar):
@@ -41,6 +58,6 @@ def prepare(source, calendar):
     background = f'<rect x="{x:g}" y="{y:g}" width="{width:g}" height="{height:g}" rx="14" fill="#090B0A"/>'
     end = source.index('>') + 1
     source = source[:end] + background + source[end:]
-    source = source.replace('</svg>', labels + '<style>@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style></svg>')
+    source = source.replace('</svg>', labels + '<style>' + glow_styles(source, cells) + '@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style></svg>')
     ET.fromstring(source)
     return source
