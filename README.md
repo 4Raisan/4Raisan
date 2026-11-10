@@ -43,8 +43,8 @@ Temporary text, image and PDF sharing between devices. Node.js and Supabase, wit
 
 ### Open source
 
-- **Floci:** [propagate tags to nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383) and [fix S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981).
-- **xerj:** [fix console range validation](https://github.com/xerj-org/xerj/pull/2607).
+- **Floci** (8 merged PRs): [propagate tags to nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383) and [fix S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981).
+- **xerj** (3 merged PRs): [fix console range validation](https://github.com/xerj-org/xerj/pull/2607).
 
 ### Tools used in these projects
 
