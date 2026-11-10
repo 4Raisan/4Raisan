@@ -1,35 +1,50 @@
 <picture>
   <source media="(max-width: 600px)" srcset="assets/header-mobile.svg">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/header-static.svg">
-  <img src="assets/header.svg" alt="Rashen Anupama — Cloud & Platform Engineering, learning through projects" width="100%">
+  <img src="assets/header.svg" alt="Rashen Anupama — Building and deploying software" width="100%">
 </picture>
 
-**Rashen Anupama · Cloud & Platform Engineering**  
-IT undergraduate at SLTC Research University.  
-Building web applications and practical tools for everyday tasks.<br>
-Moving toward cloud infrastructure, automation, and IAM.
+**Rashen Anupama** · IT undergraduate at SLTC Research University, Sri Lanka
+
+I build and deploy web applications and desktop tools. I use containers, CI, and managed databases in my projects, and I’m working toward cloud infrastructure and platform engineering.
+
+[Email](mailto:mn4raisan@gmail.com) · [All repositories](https://github.com/4Raisan?tab=repositories)
 
 ### Selected work
 
-[**Luxora ↗**](https://github.com/4Raisan/Luxora_v1)
+[**Luxora ↗**](https://github.com/4Raisan/Luxora_v1) · [live site](https://luxora.bond)
 
-Home-concierge platform built with React, Express, Prisma and PostgreSQL. Customer, provider and administrator roles, with server-side access and KYC checks. Frontend hosted on Vercel, backend on Northflank and database on Supabase.
+Home-concierge platform with customer, provider and administrator roles. React, Express, Prisma and PostgreSQL, with access and KYC checks enforced on the server. Frontend on Vercel, backend container on Northflank, database on Supabase.
 
-[Live site](https://luxora.bond) · [Architecture explorer](https://4raisan.github.io/Luxora_v1/architecture/) · [Knowledge graph](https://4raisan.github.io/Luxora_v1/)
+- **Infrastructure:** [container build](https://github.com/4Raisan/Luxora_v1/blob/main/Dockerfile) · [CI runs](https://github.com/4Raisan/Luxora_v1/actions/workflows/ci.yml) · [Cloud Run implementation and rollout plan](https://github.com/4Raisan/Luxora_v1/blob/main/docs/SERVERLESS_ARCHITECTURE.md)
+- **Access control:** [auth middleware](https://github.com/4Raisan/Luxora_v1/blob/main/backend/src/middleware/auth.js)
+- **Design:** [architecture explorer](https://4raisan.github.io/Luxora_v1/architecture/) · [knowledge graph](https://4raisan.github.io/Luxora_v1/)
 
-[Container build](https://github.com/4Raisan/Luxora_v1/blob/main/Dockerfile) · [CI and current results](https://github.com/4Raisan/Luxora_v1/actions/workflows/ci.yml) · [Access checks](https://github.com/4Raisan/Luxora_v1/blob/main/backend/src/middleware/auth.js)
+[**YakKeeper ↗**](https://github.com/4Raisan/YakKeeper) · [live site](https://yakkeeper.vercel.app/)
 
-[**YakKeeper ↗**](https://github.com/4Raisan/YakKeeper)
+Project discovery and collaboration hub. Next.js and Supabase, with GitHub sign-in, owner and member permissions, team task boards and administrator moderation.
 
-Project discovery and collaboration hub built with Next.js and Supabase. GitHub sign-in, owner and member permissions, team task boards and administrator moderation. Joining a project does not grant GitHub repository access.
+- [Setup and deployment](https://github.com/4Raisan/YakKeeper#deploy-your-own-instance) · [Security policy](https://github.com/4Raisan/YakKeeper/blob/main/.github/SECURITY.md)
 
-[Live site](https://yakkeeper.vercel.app/) · [Setup and deployment](https://github.com/4Raisan/YakKeeper#deploy-your-own-instance) · [Security policy](https://github.com/4Raisan/YakKeeper/blob/main/.github/SECURITY.md)
+[**Quick Drop 11 ↗**](https://github.com/4Raisan/Quick-Drop-11) · [live site](https://quickdrop11.vercel.app/)
 
-[**Quick Drop 11 ↗**](https://github.com/4Raisan/Quick-Drop-11)
+Temporary text, image and PDF sharing between devices. Node.js and Supabase, with four-digit share IDs, direct uploads, signed download links and 11-hour expiry.
 
-Temporary text, image and PDF sharing between devices, built with Node.js and Supabase. Four-digit share IDs, uploads up to 5 MB and 11-hour expiry, with direct uploads, signed download links and retry handling. The sharing feed is public.
+- [Architecture](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/ARCHITECTURE.md) · [Deployment and maintenance](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/OPERATIONS.md)
 
-[Live site](https://quickdrop11.vercel.app/) · [Architecture](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/ARCHITECTURE.md) · [Deployment and maintenance](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/OPERATIONS.md)
+### Also built
+
+| Project | What it is |
+| --- | --- |
+| [OmniView](https://github.com/4Raisan/OmniView) | Offline desktop viewer for PDFs, documents, spreadsheets and media, released for Windows, Linux and macOS |
+| [NetCroc](https://github.com/4Raisan/NetCroc) | Desktop network monitor with live speeds, usage history and optional VPN tools |
+| [CodeWeb](https://github.com/4Raisan/CodeWeb) | Single-file codebase graph explorer that runs in the browser |
+| [Sprinkle](https://github.com/4Raisan/Sprinkle) | Car wash marketplace MVP branded Sparkle on Next.js, Prisma and Neon PostgreSQL |
+
+### Open source
+
+- **Floci:** [propagate tags to nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383) and [fix S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981).
+- **xerj:** [fix console range validation](https://github.com/xerj-org/xerj/pull/2607).
 
 ### Tools used in these projects
 
@@ -40,22 +55,15 @@ Temporary text, image and PDF sharing between devices, built with Node.js and Su
   <img src="assets/tool-postgres.svg" alt="PostgreSQL" width="40" height="40">
 </p>
 
-These tools reflect work in the repositories above. Cloud infrastructure and IAM are the direction I’m developing toward; the project links show what I’ve built so far.
+**In the repositories above:** Docker, GitHub Actions, Node.js, PostgreSQL, Prisma, React, Next.js, TypeScript, Python, Supabase, Vercel.
+
+**Learning next:** AWS, Terraform, Kubernetes and IAM.
 
 ### GitHub activity
 
 <p>
   <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="30%" align="middle">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/calendar.svg">
-    <img src="assets/snake.svg" alt="Animated snake eating the GitHub contribution calendar for 4Raisan" width="69%" align="middle">
-  </picture>
+  <img src="assets/calendar.svg" alt="GitHub contribution calendar for 4Raisan" width="69%" align="middle">
 </p>
 
-<sub>Public activity snapshot, refreshed every six hours. The original Platane snake is refreshed alongside the public statistics. Calendar dates come directly from GitHub; backdated contributions appear after GitHub processes them. <!-- activity-date -->Updated 2026-11-11 01:12 Sri Lanka time (UTC+05:30)<!-- /activity-date -->. Activity counts describe participation, not skill level.</sub>
-
-### Contact
-
-[Email me](mailto:mn4raisan@gmail.com) · [Browse my repositories](https://github.com/4Raisan?tab=repositories)
-
-<sub>[Profile maintenance](MAINTENANCE.md)</sub>
+<sub><!-- activity-date -->Updated 2026-11-11 01:12 Sri Lanka time (UTC+05:30)<!-- /activity-date --> · [Profile maintenance](MAINTENANCE.md)</sub>

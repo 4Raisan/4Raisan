@@ -88,8 +88,8 @@ published profile.
 The original Platane/snk action generates the snake using the original pinned
 revision and emerald palette. Its pathfinding animation is preserved, including
 the contribution collection bar. The publisher adds the original dark frame,
-year heading, and month labels. The profile uses assets/snake.svg by default and
-assets/calendar.svg when reduced motion is requested.
+year heading, and month labels. The profile displays assets/calendar.svg. The workflow still publishes
+assets/snake.svg as part of the activity snapshot.
 
 The action fetches its own GitHub contribution snapshot, so it may briefly differ
 from the statistics while GitHub processes activity. Local statistics generation
