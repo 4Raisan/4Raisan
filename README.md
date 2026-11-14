@@ -32,6 +32,11 @@ Temporary text, image and PDF sharing between devices. Node.js and Supabase, wit
 
 - [Architecture](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/ARCHITECTURE.md) · [Deployment and maintenance](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/OPERATIONS.md)
 
+### Open source
+
+- **Floci** (8 merged PRs): [propagate tags to nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383); [correct DynamoDB global-table billing mode](https://github.com/floci-io/floci/pull/7931); and [fix S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981).
+- **xerj** (3 merged PRs): [fix console range validation](https://github.com/xerj-org/xerj/pull/2607) and [see all merged fixes](https://github.com/xerj-org/xerj/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan).
+
 ### Also built
 
 | Project | What it is |
@@ -39,12 +44,7 @@ Temporary text, image and PDF sharing between devices. Node.js and Supabase, wit
 | [OmniView](https://github.com/4Raisan/OmniView) | Offline desktop viewer for PDFs, documents, spreadsheets and media, released for Windows, Linux and macOS |
 | [NetCroc](https://github.com/4Raisan/NetCroc) | Desktop network monitor with live speeds, usage history and optional VPN tools |
 | [CodeWeb](https://github.com/4Raisan/CodeWeb) | Single-file codebase graph explorer that runs in the browser |
-| [Sprinkle](https://github.com/4Raisan/Sprinkle) | Car wash marketplace MVP branded Sparkle on Next.js, Prisma and Neon PostgreSQL |
-
-### Open source
-
-- **Floci** (8 merged PRs): [propagate tags to nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383) and [fix S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981).
-- **xerj** (3 merged PRs): [fix console range validation](https://github.com/xerj-org/xerj/pull/2607).
+| [Sparkle](https://github.com/4Raisan/Sprinkle) | Car wash marketplace MVP on Next.js, Prisma and Neon PostgreSQL |
 
 ### Tools used in these projects
 
