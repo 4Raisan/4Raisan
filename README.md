@@ -4,9 +4,7 @@
   <img src="assets/header.svg" alt="Rashen Anupama — Building and deploying software" width="100%">
 </picture>
 
-**Rashen Anupama** · IT undergraduate at SLTC Research University, Sri Lanka
-
-I build and deploy web applications and desktop tools. I use containers, CI, and managed databases in my projects, and I’m working toward cloud infrastructure and platform engineering.
+I build and deploy web applications and developer tools. My cloud and platform work includes Luxora’s CI pipeline and contributions to Floci’s CloudFormation, DynamoDB and S3 implementations.
 
 [Email](mailto:mn4raisan@gmail.com) · [All repositories](https://github.com/4Raisan?tab=repositories)
 
@@ -43,8 +41,6 @@ Luxora is a home-concierge platform for customers, providers and administrators.
   <img src="assets/tool-node.svg" alt="Node.js" width="40" height="40">
   <img src="assets/tool-postgres.svg" alt="PostgreSQL" width="40" height="40">
 </p>
-
-**In the repositories above:** Docker, GitHub Actions, Node.js, PostgreSQL, Prisma, React, Next.js, TypeScript, Python, Supabase, Vercel.
 
 **Learning next:** AWS, Terraform, Kubernetes and IAM.
 
