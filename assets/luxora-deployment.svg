@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 178" role="img" aria-labelledby="title desc">
+  <title id="title">Luxora · Home concierge</title>
+  <desc id="desc">Deployment architecture: React on Vercel, Express on Northflank, and PostgreSQL on Supabase.</desc>
+  <defs>
+    <linearGradient id="bg"><stop stop-color="#172625"/><stop offset=".58" stop-color="#101c20"/><stop offset="1" stop-color="#172331"/></linearGradient>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r=".8" fill="#719b95" opacity=".28"/></pattern>
+  </defs>
+  <rect x="1" y="1" width="758" height="176" rx="15" fill="url(#bg)" stroke="#36534c"/>
+  <rect x="360" y="10" width="384" height="158" fill="url(#dots)"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="28" y="35" fill="#86e4bf" font-size="13" letter-spacing="2">FEATURED PROJECT</text>
+    <text x="26" y="103" fill="#fff3d8" font-size="64" font-family="Georgia,serif">Luxora</text>
+    <text x="30" y="139" fill="#d0ddd6" font-size="21">Home concierge platform</text>
+    <path d="M400 42v94" stroke="#78b6a3" stroke-width="2"/>
+    <g transform="translate(0 0)">
+      <rect x="423" y="23" width="307" height="36" rx="7" fill="#182b2c" stroke="#38534f"/>
+      <circle cx="400" cy="41" r="5" fill="#8be0bc"/><path d="M406 41h16" stroke="#78b6a3"/>
+      <text x="439" y="47" font-size="18" fill="#f0f5f2">React</text>
+      <text x="712" y="47" text-anchor="end" font-size="17" fill="#8be0bc">Vercel</text>
+    </g>
+    <g transform="translate(0 47)">
+      <rect x="423" y="23" width="307" height="36" rx="7" fill="#182b2c" stroke="#38534f"/>
+      <circle cx="400" cy="41" r="5" fill="#e8ca8e"/><path d="M406 41h16" stroke="#78b6a3"/>
+      <text x="439" y="47" font-size="18" fill="#f0f5f2">Express</text>
+      <text x="712" y="47" text-anchor="end" font-size="17" fill="#e8ca8e">Northflank</text>
+    </g>
+    <g transform="translate(0 94)">
+      <rect x="423" y="23" width="307" height="36" rx="7" fill="#182b2c" stroke="#38534f"/>
+      <circle cx="400" cy="41" r="5" fill="#9cbfff"/><path d="M406 41h16" stroke="#78b6a3"/>
+      <text x="439" y="47" font-size="18" fill="#f0f5f2">PostgreSQL</text>
+      <text x="712" y="47" text-anchor="end" font-size="17" fill="#9cbfff">Supabase</text>
+    </g>
+  </g>
+</svg>
