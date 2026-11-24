@@ -4,33 +4,20 @@
   <img src="assets/header.svg" alt="Rashen Anupama — Building and deploying software" width="100%">
 </picture>
 
-I build **web applications and developer tools**, with a focus on cloud infrastructure and CI. [Contact me](mailto:mn4raisan@gmail.com) · [Browse repositories](https://github.com/4Raisan?tab=repositories)
+I build **web applications and developer tools** in Sri Lanka. I’m especially interested in how software gets tested, deployed and kept running.
 
-[![Luxora home concierge platform. React on Vercel, Express on Northflank, PostgreSQL on Supabase. Open the repository.](assets/luxora-deployment.svg)](https://github.com/4Raisan/Luxora)
+[Email me](mailto:mn4raisan@gmail.com) · [Browse my repositories](https://github.com/4Raisan?tab=repositories)
 
-**Inside the build** · Customers book services, providers manage requests, and administrators oversee the platform. Pull requests run checks for the files they change. Scheduled builds run the full suite.
+## 🚀 Featured projects
 
-**[Visit Luxora ↗](https://luxora.bond)** · [Explore the architecture](https://4raisan.github.io/Luxora/architecture/) · [Read the CI workflow](https://github.com/4Raisan/Luxora/blob/main/.github/workflows/ci.yml)
-
-## Open source
-
-| Upstream | What I fixed | Merged work |
-| --- | --- | --- |
-| **Floci** | Tag propagation to nested CloudFormation stacks | [PR #7383](https://github.com/floci-io/floci/pull/7383) |
-| **Floci** | Billing mode for DynamoDB global tables | [PR #7931](https://github.com/floci-io/floci/pull/7931) |
-| **Floci** | Pagination for S3 multipart uploads | [PR #6981](https://github.com/floci-io/floci/pull/6981) |
-| **xerj** | Range validation in the console | [PR #2607](https://github.com/xerj-org/xerj/pull/2607) |
-
-All merged contributions · [Floci](https://github.com/floci-io/floci/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan) · [xerj](https://github.com/xerj-org/xerj/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
-
-## Selected tools
-
-| **Quick Drop 11** | **CodeWeb** |
+| Project | What you can do |
 | --- | --- |
-| Share text, images and PDFs between devices with a **four-digit code**. Shares expire after 11 hours. | Explore a codebase as an **interactive graph** in your browser. The viewer fits in a single file. |
-| [Try Quick Drop ↗](https://quickdrop11.vercel.app/) · [Source](https://github.com/4Raisan/Quick-Drop-11) | [Explore CodeWeb ↗](https://github.com/4Raisan/CodeWeb) |
+| **[Luxora](https://github.com/4Raisan/Luxora)** | Book a home service and follow it from request to fulfillment. Under the hood, pull requests run checks based on the files they change. [Visit Luxora](https://luxora.bond) · [Architecture](https://4raisan.github.io/Luxora/architecture/) · [CI workflow](https://github.com/4Raisan/Luxora/blob/main/.github/workflows/ci.yml) |
+| **[Quick Drop 11](https://github.com/4Raisan/Quick-Drop-11)** | Move text, images or PDFs between devices with a **four-digit code**. Shares expire after 11 hours. [Try it](https://quickdrop11.vercel.app/) |
+| **[CodeWeb](https://github.com/4Raisan/CodeWeb)** | Explore the relationships in a codebase as an **interactive graph**. The browser viewer fits in a single file. |
 
-### Also built
+<details>
+<summary>More projects</summary>
 
 | Project | What it is |
 | --- | --- |
@@ -39,16 +26,22 @@ All merged contributions · [Floci](https://github.com/floci-io/floci/pulls?q=is
 | [YakKeeper](https://github.com/4Raisan/YakKeeper) | Project discovery and collaboration hub with GitHub sign-in and team task boards |
 | [Sparkle](https://github.com/4Raisan/Sprinkle) | Car wash marketplace MVP on Next.js, Prisma and Neon PostgreSQL |
 
-### Tools used in these projects
+</details>
 
-<p>
+## 🛠 Technologies I use
+
+<p align="center">
   <img src="assets/tool-docker.svg" alt="Docker" width="40" height="40">
   <img src="assets/tool-actions.svg" alt="GitHub Actions" width="40" height="40">
   <img src="assets/tool-node.svg" alt="Node.js" width="40" height="40">
   <img src="assets/tool-postgres.svg" alt="PostgreSQL" width="40" height="40">
 </p>
 
-**Learning next:** AWS, Terraform, Kubernetes and IAM.
+## 🌱 Open source
+
+**Floci** · Fixed [tag propagation in nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383), [DynamoDB global-table billing](https://github.com/floci-io/floci/pull/7931) and [S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981). [All merged PRs](https://github.com/floci-io/floci/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
+
+**xerj** · Fixed [range validation in the console](https://github.com/xerj-org/xerj/pull/2607). [All merged PRs](https://github.com/xerj-org/xerj/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
 
 ### GitHub activity
 
