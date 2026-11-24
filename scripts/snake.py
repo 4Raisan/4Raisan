@@ -46,7 +46,10 @@ def prepare(source, calendar):
         month = date[:7]
         if month != previous_month:
             # Leave enough room for a three-letter month at the right edge.
-            if column <= columns[-1] - 28:
+            next_week = weeks[1]['contributionDays'] if len(weeks) > 1 else []
+            short_first_month = column == columns[0] and any(
+                day['date'].endswith('-01') for day in next_week)
+            if not short_first_month and column <= columns[-1] - 28:
                 labels += f'<text x="{column:g}" y="-10" fill="#A5AEA8" font-size="16">{month_abbr[int(date[5:7])]}</text>'
             previous_month = month
     labels += '</g>'
