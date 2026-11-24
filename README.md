@@ -12,13 +12,13 @@ I build and deploy web applications and desktop tools. I use containers, CI, and
 
 ### Selected work
 
-[**Luxora ↗**](https://github.com/4Raisan/Luxora_v1) · [live site](https://luxora.bond)
+[**Luxora ↗**](https://github.com/4Raisan/Luxora) · [live site](https://luxora.bond)
 
 Home-concierge platform with customer, provider and administrator roles. React, Express, Prisma and PostgreSQL, with access and KYC checks enforced on the server. Frontend on Vercel, backend container on Northflank, database on Supabase.
 
-- **Infrastructure:** [container build](https://github.com/4Raisan/Luxora_v1/blob/main/Dockerfile) · [CI runs](https://github.com/4Raisan/Luxora_v1/actions/workflows/ci.yml) · [Cloud Run implementation and rollout plan](https://github.com/4Raisan/Luxora_v1/blob/main/docs/SERVERLESS_ARCHITECTURE.md)
-- **Access control:** [auth middleware](https://github.com/4Raisan/Luxora_v1/blob/main/backend/src/middleware/auth.js)
-- **Design:** [architecture explorer](https://4raisan.github.io/Luxora_v1/architecture/) · [knowledge graph](https://4raisan.github.io/Luxora_v1/)
+- **Infrastructure:** [container build](https://github.com/4Raisan/Luxora/blob/main/Dockerfile) · [CI runs](https://github.com/4Raisan/Luxora/actions/workflows/ci.yml) · [Cloud Run implementation and rollout plan](https://github.com/4Raisan/Luxora/blob/main/docs/SERVERLESS_ARCHITECTURE.md)
+- **Access control:** [auth middleware](https://github.com/4Raisan/Luxora/blob/main/backend/src/middleware/auth.js)
+- **Design:** [architecture explorer](https://4raisan.github.io/Luxora/architecture/) · [knowledge graph](https://4raisan.github.io/Luxora/)
 
 [**YakKeeper ↗**](https://github.com/4Raisan/YakKeeper) · [live site](https://yakkeeper.vercel.app/)
 
