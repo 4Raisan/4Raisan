@@ -4,17 +4,28 @@
   <img src="assets/header.svg" alt="Rashen Anupama — Building and deploying software" width="100%">
 </picture>
 
-I build **web applications and developer tools** in Sri Lanka. I’m especially interested in how software gets tested, deployed and kept running.
-
-[Email me](mailto:mn4raisan@gmail.com) · [Browse my repositories](https://github.com/4Raisan?tab=repositories)
-
 ## 🚀 Featured projects
 
-| Project | What you can do |
-| --- | --- |
-| **[Luxora](https://github.com/4Raisan/Luxora)** | Book a home service and follow it from request to fulfillment. Under the hood, pull requests run checks based on the files they change. [Visit Luxora](https://luxora.bond) · [Architecture](https://4raisan.github.io/Luxora/architecture/) · [CI workflow](https://github.com/4Raisan/Luxora/blob/main/.github/workflows/ci.yml) |
-| **[Quick Drop 11](https://github.com/4Raisan/Quick-Drop-11)** | Move text, images or PDFs between devices with a **four-digit code**. Shares expire after 11 hours. [Try it](https://quickdrop11.vercel.app/) |
-| **[CodeWeb](https://github.com/4Raisan/CodeWeb)** | Explore the relationships in a codebase as an **interactive graph**. The browser viewer fits in a single file. |
+<table><tr>
+<td width="33%" valign="top" align="center">
+<h3>🏠<br><a href="https://github.com/4Raisan/Luxora">Luxora</a></h3>
+<p><img src="assets/badges/react.png" height="20" alt="React"> <img src="assets/badges/express.png" height="20" alt="Express"></p>
+<p>Book home services.<br><strong>Role-based booking</strong></p>
+<p><a href="https://luxora.bond"><b>Visit Luxora ↗</b></a></p>
+</td>
+<td width="33%" valign="top" align="center">
+<h3>⚡<br><a href="https://github.com/4Raisan/Quick-Drop-11">Quick Drop 11</a></h3>
+<p><img src="assets/badges/node.png" height="20" alt="Node.js"> <img src="assets/badges/storage.png" height="20" alt="Supabase"></p>
+<p>Share files across devices.<br><strong>4-digit code · 11h expiry</strong></p>
+<p><a href="https://quickdrop11.vercel.app/"><b>Try Quick Drop ↗</b></a></p>
+</td>
+<td width="33%" valign="top" align="center">
+<h3>🕸️<br><a href="https://github.com/4Raisan/CodeWeb">CodeWeb</a></h3>
+<p><img src="assets/badges/js.png" height="20" alt="JavaScript"> <img src="assets/badges/browser.png" height="20" alt="Browser"></p>
+<p>Explore a codebase visually.<br><strong>Single-file graph viewer</strong></p>
+<p><a href="https://github.com/4Raisan/CodeWeb"><b>View source ↗</b></a></p>
+</td>
+</tr></table>
 
 <details>
 <summary>More projects</summary>
@@ -28,29 +39,55 @@ I build **web applications and developer tools** in Sri Lanka. I’m especially 
 
 </details>
 
-## 🛠 Technologies I use
+## 👨‍💻 About me
 
-<p align="center">
-  <img src="assets/tool-docker.svg" alt="Docker" width="40" height="40">
-  <img src="assets/tool-actions.svg" alt="GitHub Actions" width="40" height="40">
-  <img src="assets/tool-node.svg" alt="Node.js" width="40" height="40">
-  <img src="assets/tool-postgres.svg" alt="PostgreSQL" width="40" height="40">
-</p>
+- 🎓 IT undergraduate at SLTC, Sri Lanka
+- ☁️ Interested in cloud and platform engineering
+- 🛠️ Building web apps and developer tools
+
+## 🧰 Toolbox
+
+**Languages**
+
+<img src="assets/tool-python.svg" alt="Python" title="Python" width="34" height="34"> <img src="assets/tool-java.svg" alt="Java" title="Java" width="34" height="34"> <img src="assets/tool-js.svg" alt="JavaScript" title="JavaScript" width="34" height="34"> <img src="assets/tool-ts.svg" alt="TypeScript" title="TypeScript" width="34" height="34"> <img src="assets/tool-powershell.svg" alt="PowerShell" title="PowerShell" width="34" height="34">
+
+Python · Java · JavaScript · TypeScript · PowerShell
+
+**Applications & data**
+
+<img src="assets/tool-react.svg" alt="React" title="React" width="34" height="34"> <img src="assets/tool-nextjs.svg" alt="Next.js" title="Next.js" width="34" height="34"> <img src="assets/tool-node.svg" alt="Node.js" title="Node.js" width="34" height="34"> <img src="assets/tool-express.svg" alt="Express" title="Express" width="34" height="34"> <img src="assets/tool-prisma.svg" alt="Prisma" title="Prisma" width="34" height="34"> <img src="assets/tool-postgres.svg" alt="SQL · PostgreSQL" title="SQL · PostgreSQL" width="34" height="34"> <img src="assets/tool-supabase.svg" alt="Supabase" title="Supabase" width="34" height="34">
+
+React · Next.js · Node.js · Express · Prisma · SQL · PostgreSQL · Supabase
+
+**Delivery**
+
+<img src="assets/tool-docker.svg" alt="Docker" title="Docker" width="34" height="34"> <img src="assets/tool-actions.svg" alt="GitHub Actions" title="GitHub Actions" width="34" height="34"> <img src="assets/tool-vercel.svg" alt="Vercel" title="Vercel" width="34" height="34"> <img src="assets/tool-git.svg" alt="Git" title="Git" width="34" height="34">
+
+Docker · GitHub Actions · Vercel · Git
+
+**Coding agents**
+
+`Claude Code` · `Antigravity` · `Codex`
 
 ## 🌱 Open source
 
-**Floci** · Fixed [tag propagation in nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383), [DynamoDB global-table billing](https://github.com/floci-io/floci/pull/7931) and [S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981). [All merged PRs](https://github.com/floci-io/floci/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
+- **Floci** · [CloudFormation tags](https://github.com/floci-io/floci/pull/7383) · [DynamoDB billing](https://github.com/floci-io/floci/pull/7931) · [S3 pagination](https://github.com/floci-io/floci/pull/6981)
+- **xerj** · [Console range validation](https://github.com/xerj-org/xerj/pull/2607)
 
-**xerj** · Fixed [range validation in the console](https://github.com/xerj-org/xerj/pull/2607). [All merged PRs](https://github.com/xerj-org/xerj/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
-
-### GitHub activity
+## 🔥 GitHub activity
 
 <p>
-  <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="21%" align="middle">
+  <img src="assets/stats.svg" alt="Public GitHub activity statistics for 4Raisan" width="550" align="middle">
+</p>
+<p>
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/calendar.svg">
-    <img src="assets/snake.svg" alt="GitHub contribution calendar with an animated snake and glowing cells" width="78%" align="middle">
+    <img src="assets/snake.svg" alt="GitHub contribution calendar with an animated snake and glowing cells" width="100%" align="middle">
   </picture>
 </p>
+
+## Connect
+
+[<img src="assets/badges/email.png" height="24" alt="Email me">](mailto:mn4raisan@gmail.com) [<img src="assets/badges/repos.png" height="24" alt="Browse my GitHub repositories">](https://github.com/4Raisan?tab=repositories)
 
 <sub><!-- activity-date -->Updated 2026-11-24 18:58 Sri Lanka time (UTC+05:30)<!-- /activity-date --> · [Profile maintenance](MAINTENANCE.md)</sub>
