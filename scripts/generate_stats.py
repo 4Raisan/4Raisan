@@ -30,17 +30,27 @@ def generate(root=ROOT, result=None, now=None):
     validate_data(data)
     rows = [('Commits', 'totalCommitContributions'), ('Pull requests', 'totalPullRequestContributions'),
             ('Issues', 'totalIssueContributions'), ('Code reviews', 'totalPullRequestReviewContributions')]
-    body = '<rect x="1" y="1" width="234" height="222" rx="14" fill="#090B0A" stroke="#26382E"/>'
     days = [d for w in data['contributionCalendar']['weeks'] for d in w['contributionDays']]
     period = days[0]['date'] + ' — ' + days[-1]['date']
-    body += f'<text x="24" y="32" fill="#A5AEA8" font-size="12">{escape(period)}</text>'
-    for i,(label,key) in enumerate(rows):
-        value = data[key]
-        if type(value) is not int or value < 0:
-            raise ValueError(f'Invalid count: {key}')
-        y = 70+i*41
-        body += f'<circle cx="27" cy="{y-5}" r="3" fill="#34D399"/><text x="42" y="{y}" fill="#A7CDBB" font-size="15">{label}</text><text x="210" y="{y}" text-anchor="end" fill="#F4F7F5" font-size="16" font-weight="700">{value:,}</text>'
-    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="236" height="224" viewBox="0 0 236 224" role="img"><title>{escape(config['username'])} public GitHub activity from {escape(period)}</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
+    current = longest = 0
+    for day in days:
+        if day['contributionCount']:
+            current += 1
+            longest = max(longest, current)
+        elif day['date'] != local_now.date().isoformat():
+            current = 0
+    total = data['contributionCalendar']['totalContributions']
+    body = '<rect x="1" y="1" width="548" height="184" rx="14" fill="#101816" stroke="#30483c"/>'
+    body += '<circle cx="275" cy="56" r="34" fill="none" stroke="#68cda1" stroke-width="3"/>'
+    for x, label, value in [(96, 'Contributions', total), (275, 'Current streak', current), (454, 'Longest streak', longest)]:
+        body += f'<text x="{x}" y="65" text-anchor="middle" fill="#eff6f2" font-size="26" font-weight="bold">{value:,}</text>'
+        body += f'<text x="{x}" y="107" text-anchor="middle" fill="#a8cfba" font-size="15">{label}</text>'
+    for i, (label, key) in enumerate(rows):
+        x = 30 + i * 135
+        body += f'<text x="{x}" y="142" font-size="12" fill="#c8d5ce">{label}</text>'
+        body += f'<text x="{x + 93}" y="142" text-anchor="end" font-size="12" fill="#eff6f2">{data[key]:,}</text>'
+    body += f'<text x="275" y="171" text-anchor="middle" font-size="13" fill="#adbbb3">{period}</text>'
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="550" height="186" viewBox="0 0 550 186" role="img"><title>{escape(config["username"])} activity and streaks in the displayed period</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
     out = root / '.generated'
     out.mkdir(exist_ok=True)
     (out/'stats.svg').write_text(svg,encoding='utf-8')
