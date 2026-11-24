@@ -10,32 +10,21 @@ I build and deploy web applications and desktop tools. I use containers, CI, and
 
 [Email](mailto:mn4raisan@gmail.com) · [All repositories](https://github.com/4Raisan?tab=repositories)
 
-### Selected work
+### [Luxora](https://github.com/4Raisan/Luxora)
 
-[**Luxora ↗**](https://github.com/4Raisan/Luxora) · [live site](https://luxora.bond)
+Luxora is a home-concierge platform for customers, providers and administrators. Its Express backend runs in a container on Northflank and stores data in PostgreSQL. On pull requests, CI selects checks based on which files changed. Scheduled runs request the full suite.
 
-Home-concierge platform with customer, provider and administrator roles. React, Express, Prisma and PostgreSQL, with access and KYC checks enforced on the server. Frontend on Vercel, backend container on Northflank, database on Supabase.
-
-- **Infrastructure:** [container build](https://github.com/4Raisan/Luxora/blob/main/Dockerfile) · [CI runs](https://github.com/4Raisan/Luxora/actions/workflows/ci.yml) · [Cloud Run implementation and rollout plan](https://github.com/4Raisan/Luxora/blob/main/docs/SERVERLESS_ARCHITECTURE.md)
-- **Access control:** [auth middleware](https://github.com/4Raisan/Luxora/blob/main/backend/src/middleware/auth.js)
-- **Design:** [architecture explorer](https://4raisan.github.io/Luxora/architecture/) · [knowledge graph](https://4raisan.github.io/Luxora/)
-
-[**YakKeeper ↗**](https://github.com/4Raisan/YakKeeper) · [live site](https://yakkeeper.vercel.app/)
-
-Project discovery and collaboration hub. Next.js and Supabase, with GitHub sign-in, owner and member permissions, team task boards and administrator moderation.
-
-- [Setup and deployment](https://github.com/4Raisan/YakKeeper#deploy-your-own-instance) · [Security policy](https://github.com/4Raisan/YakKeeper/blob/main/.github/SECURITY.md)
-
-[**Quick Drop 11 ↗**](https://github.com/4Raisan/Quick-Drop-11) · [live site](https://quickdrop11.vercel.app/)
-
-Temporary text, image and PDF sharing between devices. Node.js and Supabase, with four-digit share IDs, direct uploads, signed download links and 11-hour expiry.
-
-- [Architecture](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/ARCHITECTURE.md) · [Deployment and maintenance](https://github.com/4Raisan/Quick-Drop-11/blob/master/docs/OPERATIONS.md)
+[Live site](https://luxora.bond) · [CI workflow](https://github.com/4Raisan/Luxora/blob/main/.github/workflows/ci.yml) · [Architecture explorer](https://4raisan.github.io/Luxora/architecture/)
 
 ### Open source
 
-- **Floci** (8 merged PRs): [propagate tags to nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383); [correct DynamoDB global-table billing mode](https://github.com/floci-io/floci/pull/7931); and [fix S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981).
-- **xerj** (3 merged PRs): [fix console range validation](https://github.com/xerj-org/xerj/pull/2607) and [see all merged fixes](https://github.com/xerj-org/xerj/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan).
+- **Floci** — [Fixed tag propagation to nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383), [DynamoDB global-table billing mode](https://github.com/floci-io/floci/pull/7931), and [S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981). [Merged contributions](https://github.com/floci-io/floci/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
+- **xerj** — [Fixed console range validation](https://github.com/xerj-org/xerj/pull/2607). [Merged contributions](https://github.com/xerj-org/xerj/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
+
+### Selected tools
+
+- [Quick Drop 11](https://github.com/4Raisan/Quick-Drop-11) lets you share text, images and PDFs between devices with a four-digit ID. Shares expire after 11 hours. [Try it](https://quickdrop11.vercel.app/)
+- [CodeWeb](https://github.com/4Raisan/CodeWeb) is a single-file tool for exploring a codebase as a graph in your browser.
 
 ### Also built
 
@@ -43,7 +32,7 @@ Temporary text, image and PDF sharing between devices. Node.js and Supabase, wit
 | --- | --- |
 | [OmniView](https://github.com/4Raisan/OmniView) | Offline desktop viewer for PDFs, documents, spreadsheets and media, released for Windows, Linux and macOS |
 | [NetCroc](https://github.com/4Raisan/NetCroc) | Desktop network monitor with live speeds, usage history and optional VPN tools |
-| [CodeWeb](https://github.com/4Raisan/CodeWeb) | Single-file codebase graph explorer that runs in the browser |
+| [YakKeeper](https://github.com/4Raisan/YakKeeper) | Project discovery and collaboration hub with GitHub sign-in and team task boards |
 | [Sparkle](https://github.com/4Raisan/Sprinkle) | Car wash marketplace MVP on Next.js, Prisma and Neon PostgreSQL |
 
 ### Tools used in these projects
