@@ -4,25 +4,31 @@
   <img src="assets/header.svg" alt="Rashen Anupama — Building and deploying software" width="100%">
 </picture>
 
-I build and deploy web applications and developer tools. My cloud and platform work includes Luxora’s CI pipeline and contributions to Floci’s CloudFormation, DynamoDB and S3 implementations.
+I build **web applications and developer tools**, with a focus on cloud infrastructure and CI. [Contact me](mailto:mn4raisan@gmail.com) · [Browse repositories](https://github.com/4Raisan?tab=repositories)
 
-[Email](mailto:mn4raisan@gmail.com) · [All repositories](https://github.com/4Raisan?tab=repositories)
+[![Luxora home concierge platform. React on Vercel, Express on Northflank, PostgreSQL on Supabase. Open the repository.](assets/luxora-deployment.svg)](https://github.com/4Raisan/Luxora)
 
-### [Luxora](https://github.com/4Raisan/Luxora)
+**Inside the build** · Customers book services, providers manage requests, and administrators oversee the platform. Pull requests run checks for the files they change. Scheduled builds run the full suite.
 
-Luxora is a home-concierge platform for customers, providers and administrators. Its Express backend runs in a container on Northflank and stores data in PostgreSQL. On pull requests, CI selects checks based on which files changed. Scheduled runs request the full suite.
+**[Visit Luxora ↗](https://luxora.bond)** · [Explore the architecture](https://4raisan.github.io/Luxora/architecture/) · [Read the CI workflow](https://github.com/4Raisan/Luxora/blob/main/.github/workflows/ci.yml)
 
-[Live site](https://luxora.bond) · [CI workflow](https://github.com/4Raisan/Luxora/blob/main/.github/workflows/ci.yml) · [Architecture explorer](https://4raisan.github.io/Luxora/architecture/)
+## Open source
 
-### Open source
+| Upstream | What I fixed | Merged work |
+| --- | --- | --- |
+| **Floci** | Tag propagation to nested CloudFormation stacks | [PR #7383](https://github.com/floci-io/floci/pull/7383) |
+| **Floci** | Billing mode for DynamoDB global tables | [PR #7931](https://github.com/floci-io/floci/pull/7931) |
+| **Floci** | Pagination for S3 multipart uploads | [PR #6981](https://github.com/floci-io/floci/pull/6981) |
+| **xerj** | Range validation in the console | [PR #2607](https://github.com/xerj-org/xerj/pull/2607) |
 
-- **Floci** — [Fixed tag propagation to nested CloudFormation stacks](https://github.com/floci-io/floci/pull/7383), [DynamoDB global-table billing mode](https://github.com/floci-io/floci/pull/7931), and [S3 multipart upload pagination](https://github.com/floci-io/floci/pull/6981). [Merged contributions](https://github.com/floci-io/floci/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
-- **xerj** — [Fixed console range validation](https://github.com/xerj-org/xerj/pull/2607). [Merged contributions](https://github.com/xerj-org/xerj/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
+All merged contributions · [Floci](https://github.com/floci-io/floci/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan) · [xerj](https://github.com/xerj-org/xerj/pulls?q=is%3Apr+is%3Amerged+author%3A4Raisan)
 
-### Selected tools
+## Selected tools
 
-- [Quick Drop 11](https://github.com/4Raisan/Quick-Drop-11) lets you share text, images and PDFs between devices with a four-digit ID. Shares expire after 11 hours. [Try it](https://quickdrop11.vercel.app/)
-- [CodeWeb](https://github.com/4Raisan/CodeWeb) is a single-file tool for exploring a codebase as a graph in your browser.
+| **Quick Drop 11** | **CodeWeb** |
+| --- | --- |
+| Share text, images and PDFs between devices with a **four-digit code**. Shares expire after 11 hours. | Explore a codebase as an **interactive graph** in your browser. The viewer fits in a single file. |
+| [Try Quick Drop ↗](https://quickdrop11.vercel.app/) · [Source](https://github.com/4Raisan/Quick-Drop-11) | [Explore CodeWeb ↗](https://github.com/4Raisan/CodeWeb) |
 
 ### Also built
 
