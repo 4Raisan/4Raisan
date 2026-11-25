@@ -4,13 +4,34 @@
   <img src="assets/header.svg" alt="Rashen Anupama — Building and deploying software" width="100%">
 </picture>
 
+I’m **Rashen Anupama**, an IT undergraduate at SLTC in Sri Lanka. I build and deploy web applications and developer tools, with a focus on cloud infrastructure and platform engineering.
+
 ## 🚀 Featured projects
 
-<p align="center">
-<a href="https://luxora.bond"><img width="265" src="assets/projects/luxora.png" alt="Luxora — Home services. React  /  Express. Explore Luxora."></a>
-<a href="https://quickdrop11.vercel.app/"><img width="265" src="assets/projects/quick-drop.png" alt="Quick Drop 11 — Cross-device file sharing. Node.js  /  Supabase. Open Quick Drop."></a>
-<a href="https://github.com/4Raisan/CodeWeb"><img width="265" src="assets/projects/codeweb.png" alt="CodeWeb — Interactive code graphs. JavaScript  /  Browser. Explore CodeWeb."></a>
-</p>
+<table><tr>
+<td width="33%" valign="top">
+<h3 align="center">🏠 <a href="https://github.com/4Raisan/Luxora">Luxora</a></h3>
+<p align="center"><img src="assets/badges/react.png" height="20" alt="React"> <img src="assets/badges/express.png" height="20" alt="Express"></p>
+<p>A home-concierge platform for customers, providers and administrators.</p>
+<p><strong>Highlights:</strong> Role-based booking and a CI pipeline that selects tests for each change.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center">⚡ <a href="https://github.com/4Raisan/Quick-Drop-11">Quick Drop 11</a></h3>
+<p align="center"><img src="assets/badges/node.png" height="20" alt="Node.js"> <img src="assets/badges/storage.png" height="20" alt="Supabase"></p>
+<p>Share text, images and PDFs between devices using a four-digit code.</p>
+<p><strong>Highlights:</strong> Signed downloads and automatic expiry after 11 hours.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center">🕸️ <a href="https://github.com/4Raisan/CodeWeb">CodeWeb</a></h3>
+<p align="center"><img src="assets/badges/js.png" height="20" alt="JavaScript"> <img src="assets/badges/browser.png" height="20" alt="Browser"></p>
+<p>Explore how files in a codebase connect through an interactive graph.</p>
+<p><strong>Highlights:</strong> A portable, single-file viewer that opens in your browser.</p>
+</td>
+</tr><tr>
+<td align="center"><a href="https://luxora.bond"><strong>Visit Luxora ↗</strong></a></td>
+<td align="center"><a href="https://quickdrop11.vercel.app/"><strong>Try Quick Drop ↗</strong></a></td>
+<td align="center"><a href="https://github.com/4Raisan/CodeWeb"><strong>View project ↗</strong></a></td>
+</tr></table>
 
 <details>
 <summary>Source code &amp; more projects</summary>
@@ -25,8 +46,6 @@
 | [Sparkle](https://github.com/4Raisan/Sprinkle) | Car wash marketplace MVP on Next.js, Prisma and Neon PostgreSQL |
 
 </details>
-
-🎓 IT undergraduate at SLTC, Sri Lanka · Building web apps and developer tools · Exploring platform engineering
 
 ## 🧰 Toolbox
 
@@ -58,7 +77,7 @@
 <p>
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/calendar.svg">
-    <img src="assets/snake.svg" alt="GitHub contribution calendar with an animated snake and glowing cells" width="100%" align="middle">
+    <img src="assets/snake.svg" alt="GitHub contribution calendar with an gold snake and a muted mint trail" width="100%" align="middle">
   </picture>
 </p>
 
