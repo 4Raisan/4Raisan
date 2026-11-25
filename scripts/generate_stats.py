@@ -32,25 +32,15 @@ def generate(root=ROOT, result=None, now=None):
             ('Issues', 'totalIssueContributions'), ('Code reviews', 'totalPullRequestReviewContributions')]
     days = [d for w in data['contributionCalendar']['weeks'] for d in w['contributionDays']]
     period = days[0]['date'] + ' — ' + days[-1]['date']
-    current = longest = 0
-    for day in days:
-        if day['contributionCount']:
-            current += 1
-            longest = max(longest, current)
-        elif day['date'] != local_now.date().isoformat():
-            current = 0
     total = data['contributionCalendar']['totalContributions']
-    body = '<rect x="1" y="1" width="548" height="184" rx="14" fill="#101816" stroke="#30483c"/>'
-    body += '<circle cx="275" cy="56" r="34" fill="none" stroke="#68cda1" stroke-width="3"/>'
-    for x, label, value in [(96, 'Contributions', total), (275, 'Current streak', current), (454, 'Longest streak', longest)]:
-        body += f'<text x="{x}" y="65" text-anchor="middle" fill="#eff6f2" font-size="26" font-weight="bold">{value:,}</text>'
-        body += f'<text x="{x}" y="107" text-anchor="middle" fill="#a8cfba" font-size="15">{label}</text>'
+    body = '<rect x="1" y="1" width="548" height="124" rx="14" fill="#101816" stroke="#30483c"/>'
+    body += f'<text x="275" y="33" text-anchor="middle" fill="#eff6f2" font-size="22" font-weight="bold">{total:,} contributions</text>'
     for i, (label, key) in enumerate(rows):
-        x = 30 + i * 135
-        body += f'<text x="{x}" y="142" font-size="12" fill="#c8d5ce">{label}</text>'
-        body += f'<text x="{x + 93}" y="142" text-anchor="end" font-size="12" fill="#eff6f2">{data[key]:,}</text>'
-    body += f'<text x="275" y="171" text-anchor="middle" font-size="13" fill="#adbbb3">{period}</text>'
-    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="550" height="186" viewBox="0 0 550 186" role="img"><title>{escape(config["username"])} activity and streaks in the displayed period</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
+        x = 18 + i * 134
+        body += f'<text x="{x}" y="77" font-size="13" fill="#c8d5ce">{label}</text>'
+        body += f'<text x="{x + 107}" y="77" text-anchor="end" font-size="16" fill="#eff6f2">{data[key]:,}</text>'
+    body += f'<text x="275" y="108" text-anchor="middle" font-size="13" fill="#adbbb3">{period}</text>'
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="550" height="126" viewBox="0 0 550 126" role="img"><title>{escape(config["username"])} public GitHub activity</title><style>text{{font-family:Arial,Helvetica,sans-serif}}</style>{body}</svg>'
     out = root / '.generated'
     out.mkdir(exist_ok=True)
     (out/'stats.svg').write_text(svg,encoding='utf-8')
