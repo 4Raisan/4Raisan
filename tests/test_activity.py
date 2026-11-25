@@ -67,7 +67,8 @@ class ActivityTests(unittest.TestCase):
         new_styles = [n.text for n in ET.fromstring(published).iter(ns + 'style')]
         self.assertTrue(all(style in new_styles for style in old_styles))
         self.assertIn('Contributions', published)
-        glow_style = next(style for style in new_styles if 'drop-shadow' in style)
+        glow_style = next(style for style in new_styles if '#598775' in style)
+        self.assertNotIn('drop-shadow', glow_style)
         for node in ET.fromstring(raw):
             classes = node.get('class', '').split()
             if len(classes) == 2 and classes[0] == 'c':

@@ -37,7 +37,7 @@ jobs:
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3, original generator
         with:
           github_user_name: ${{ env.SNAKE_USERNAME }}
-          outputs: .generated/snake.svg?color_snake=#A7CDBB&color_dots=#141916,#174B36,#187D52,#24AA73,#34D399
+          outputs: .generated/snake.svg?color_snake=#FFD477&color_dots=#141916,#174B36,#187D52,#24AA73,#34D399
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Validate and publish activity assets

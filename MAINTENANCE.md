@@ -89,7 +89,7 @@ The original Platane/snk action generates the snake using the original pinned
 revision and emerald palette. Its pathfinding animation is preserved, including
 the contribution collection bar. The publisher adds the original dark frame,
 year heading, and month labels. The profile displays the animated snake and uses the static calendar for
-reduced motion. Each visited contribution cell keeps a mint glow until the
+reduced motion. The gold snake leaves a muted mint trail on each visited cell until the
 next loop. The publisher uses the original bite timing.
 
 The action fetches its own GitHub contribution snapshot, so it may briefly differ

@@ -15,9 +15,8 @@ def glow_styles(source, cells):
     rules = []
     for name in sorted(cell_names):
         before, color, after = bites[name]
-        rules.append(f'@keyframes {name}{{0%,{before}%{{fill:{color};filter:none}}'
-                     f'{after}%,100%{{fill:#9CF9CA;filter:drop-shadow(0 0 2px #34D399) '
-                     'drop-shadow(0 0 4px #34D399)}}')
+        rules.append(f'@keyframes {name}{{0%,{before}%{{fill:{color}}}'
+                     f'{after}%,100%{{fill:#598775}}}}')
     return ''.join(rules)
 
 
